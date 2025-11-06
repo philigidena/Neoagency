@@ -13,7 +13,7 @@ const portfolio_data: DataType[] = [
       id: 1,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb.jpg",
-      title: "Ukulele",
+      title: "Dacht",
       tag: "BRANDING",
       category: "prof prof1"
    },
@@ -21,7 +21,7 @@ const portfolio_data: DataType[] = [
       id: 2,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-2.jpg",
-      title: "Balenciaga",
+      title: "Ye-Almaz Dental",
       tag: "DIGITAL",
       category: "prof2 prof4"
    },
@@ -29,32 +29,32 @@ const portfolio_data: DataType[] = [
       id: 3,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-3.jpg",
-      title: "Circoloco",
-      tag: "AGENCY",
+      title: "SARA Bedroom Solutions",
+      tag: "MARKETING",
       category: "prof1 prof3"
    },
    {
       id: 4,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-4.jpg",
-      title: "Montana",
-      tag: "MARKETING",
+      title: "La Maison",
+      tag: "BRANDING",
       category: "prof3 prof1"
    },
    {
       id: 5,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-5.jpg",
-      title: "Harmour",
-      tag: "VISUAL",
+      title: "Brundo",
+      tag: "DIGITAL",
       category: "prof2 prof4"
    },
    {
       id: 6,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-6.jpg",
-      title: "Fiedunit",
-      tag: "Agency",
+      title: "NAK Trading",
+      tag: "MARKETING",
       category: "prof prof1"
    },
 
@@ -64,23 +64,23 @@ const portfolio_data: DataType[] = [
       id: 1,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb.jpg",
-      title: "Balenciaga",
-      tag: "DIGITAL",
+      title: "Dacht",
+      tag: "BRANDING",
       category: "prof prof1"
    },
    {
       id: 2,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-2.jpg",
-      title: "Grinks",
-      tag: "STUDIO",
+      title: "SARA",
+      tag: "MARKETING",
       category: "prof2 prof4"
    },
    {
       id: 3,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-3.jpg",
-      title: "Suppar",
+      title: "Ye-Almaz",
       tag: "DIGITAL",
       category: "prof1 prof3"
    },
@@ -88,31 +88,31 @@ const portfolio_data: DataType[] = [
       id: 4,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-4.jpg",
-      title: "Outward",
-      tag: "CREATIVE",
+      title: "Brundo",
+      tag: "BRANDING",
       category: "prof3 prof1"
    },
    {
       id: 5,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-5.jpg",
-      title: "Okios",
-      tag: "DIGITAL",
+      title: "Store 251",
+      tag: "MARKETING",
       category: "prof2 prof4"
    },
    {
       id: 6,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-6.jpg",
-      title: "Patagonia",
-      tag: "MARKETING",
+      title: "KAL Makeup School",
+      tag: "BRANDING",
       category: "prof prof1"
    },
    {
       id: 7,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-7.jpg",
-      title: "Woodie",
+      title: "Rungo Trackers",
       tag: "DIGITAL",
       category: "prof3 prof1"
    },
@@ -120,16 +120,16 @@ const portfolio_data: DataType[] = [
       id: 8,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-8.jpg",
-      title: "Naintara",
-      tag: "DIGITAL",
+      title: "Idea",
+      tag: "MARKETING",
       category: "prof2 prof4"
    },
    {
       id: 9,
       page: "portfolio_2",
       img: "/assets/img/portfolio/three-columns/thumb-9.jpg",
-      title: "Bisumvora",
-      tag: "TECHNOLOGY",
+      title: "AddisFly",
+      tag: "BRANDING",
       category: "prof prof1"
    },
 
@@ -139,23 +139,23 @@ const portfolio_data: DataType[] = [
       id: 1,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb.jpg",
-      title: "Balenciaga",
-      tag: "DIGITAL",
+      title: "Dacht",
+      tag: "BRANDING",
       category: "prof prof1"
    },
    {
       id: 2,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-2.jpg",
-      title: "Grinks",
-      tag: "STUDIO",
+      title: "SARA",
+      tag: "MARKETING",
       category: "prof2 prof4"
    },
    {
       id: 3,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-3.jpg",
-      title: "Suppar",
+      title: "Ye-Almaz",
       tag: "DIGITAL",
       category: "prof1 prof3"
    },
@@ -163,15 +163,15 @@ const portfolio_data: DataType[] = [
       id: 4,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-4.jpg",
-      title: "Outward",
-      tag: "CREATIVE",
+      title: "La Maison",
+      tag: "BRANDING",
       category: "prof3 prof1"
    },
    {
       id: 5,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-5.jpg",
-      title: "Okios",
+      title: "Brundo",
       tag: "DIGITAL",
       category: "prof2 prof4"
    },
@@ -179,7 +179,7 @@ const portfolio_data: DataType[] = [
       id: 6,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-6.jpg",
-      title: "Patagonia",
+      title: "NAK Trading",
       tag: "MARKETING",
       category: "prof prof1"
    },
@@ -187,16 +187,16 @@ const portfolio_data: DataType[] = [
       id: 7,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-7.jpg",
-      title: "Woodie",
-      tag: "DIGITAL",
+      title: "KAL",
+      tag: "BRANDING",
       category: "prof3 prof1"
    },
    {
       id: 8,
       page: "portfolio_3",
       img: "/assets/img/portfolio/four-columns/thumb-8.jpg",
-      title: "Naintara",
-      tag: "DIGITAL",
+      title: "Store 251",
+      tag: "MARKETING",
       category: "prof2 prof4"
    },
 ];

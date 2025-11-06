@@ -12,7 +12,7 @@ const team_data: DataType[] = [
    {
       id: 1,
       page: "home_4",
-      thumb: "/assets/img/team/thumb.jpg",
+      thumb: "/assets/Jimmy.jpg",
       name: "JAMAL ABDU",
       designation: "General Manager | Head of Operations & Production Technology",
       description: "With years of experience producing, editing, and directing TV shows, Jamal oversees operations and production with precision. His leadership ensures smooth execution from concept to delivery."
@@ -20,7 +20,7 @@ const team_data: DataType[] = [
    {
       id: 2,
       page: "home_4",
-      thumb: "/assets/img/team/thumb-2.jpg",
+      thumb: "/assets/Fila.jpg",
       name: "PHILIMON MENGESHA",
       designation: "Lead, Business Development, Strategy & Client Management",
       description: "An Executive Producer of major TV shows, Philimon brings experience from top local and international channels. He leads business development and client relations with vision and creative strength."

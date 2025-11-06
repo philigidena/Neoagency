@@ -40,17 +40,17 @@ const blog_data: DataType[] = [
       id: 1,
       page: "home_4",
       thumb: "/assets/img/blog/blog-4/thumb-2.jpg",
-      title: "We are excited for our work and how it positively impacts clients. With over experience",
-      tag: "Branding ",
-      date: "June 4, 2024",
+      title: "Psychology-Driven Marketing: The Science Behind Emotional Connections",
+      tag: "Strategy",
+      date: "January 15, 2025",
    },
    {
       id: 2,
       page: "home_4",
       thumb: "/assets/img/blog/blog-4/thumb.jpg",
-      title: "We are excited for our work and how it positively impacts clients. With over experience",
-      tag: "Branding ",
-      date: "June 4, 2024",
+      title: "From Dopamine Studios to Neo: Our Journey in Redefining Brand Storytelling",
+      tag: "Insights",
+      date: "January 10, 2025",
    },
 
    // home_7

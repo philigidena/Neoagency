@@ -16,8 +16,8 @@ const Team = () => {
                {filteredData.map((item) => (
                   <div key={item.id} className="col-lg-3 col-md-6 col-sm-6">
                      <div className="td-team-4-wrap p-relative mb-30">
-                        <div className="td-team-4-thumb">
-                           <img className="w-100" src={item.thumb} alt="" />
+                        <div className="td-team-4-thumb" style={{ height: '400px', overflow: 'hidden' }}>
+                           <img className="w-100" src={item.thumb} alt="" style={{ height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
                         </div>
                         <div className="td-team-4-content text-center">
                            <span className="td-team-4-subtitle">{item.designation}</span>
