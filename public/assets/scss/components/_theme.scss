@@ -67,18 +67,15 @@
 /*  01. Theme Default CSS
 ==============================================*/
 
-@import url($font-url);
+// Custom fonts loaded via @font-face in _fonts.scss
 
 
 /*=============================
 	Typography css start
 ===============================*/
 body {
-	font-family: var(--td-ff-body);
-	font-size: 16px;
-	font-weight: 400;
+	@include responsive-font('body');
 	color: var(--td-grey-1);
-	line-height: 26px;
 }
 img,
 .img {
@@ -169,10 +166,8 @@ h4,
 h5,
 h6 {
 	color: var(--td-common-black);
-	font-weight: 700;
-	font-family: var(--td-ff-heading);
-	line-height: 1.1;
 	text-transform: unset;
+	margin-bottom: 20px;
 }
 h1 a,
 h2 a,
@@ -183,27 +178,26 @@ h6 a {
 	color: inherit;
 }
 h1 {
-	font-size: 48px;
+	@include responsive-font('h1');
 }
 h2 {
-	font-size: 36px;
+	@include responsive-font('h2');
 }
 h3 {
-	font-size: 24px;
+	@include responsive-font('h3');
 }
 h4 {
-	font-size: 18px;
+	@include responsive-font('h4');
 }
 h5 {
-	font-size: 17px;
+	@include responsive-font('h5');
 }
 h6 {
-	font-size: 16px;
+	@include responsive-font('h6');
 }
 p {
+	@include responsive-font('body');
 	margin-bottom: 15px;
-	font-size: 18px;
-	line-height: 32px;
 }
 label {
 	color: var(--td-common-black);

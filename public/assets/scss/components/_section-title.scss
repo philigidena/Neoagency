@@ -120,35 +120,20 @@
 	}
 	&-4{
 		&-title{
-			font-family: var(--td-ff-teko);
-			font-weight: 400;
-			font-size: 80px;
-			line-height: 94%;
+			@include responsive-font('display');
 			text-transform: uppercase;
 			color: var(--td-common-white);
-			@media #{$xl} {
-				font-size: 70px;
-			}
-			@media #{$lg,$md,$sm} {
-				font-size: 60px;
-				& br{
-					display: none;
-				}
-			}
-			@media #{$xs} {
-				font-size: 40px;
-			}
 			& span.green-text{
 				color: var(--td-common-green-2);
 			}
 		}
 		&-subtitle{
-			font-weight: 400;
-			font-size: 18px;
+			@include responsive-font('body');
 			display: inline-block;
 			color: var(--td-common-green-2);
 		}
 		&-text{
+			@include responsive-font('body');
 			color: var(--td-grey-3);
 		}
 	}

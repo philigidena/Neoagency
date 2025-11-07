@@ -313,28 +313,15 @@
             }
         }
         &-bigtitle{
-            font-family: var(--td-ff-teko);
-            font-weight: 500;
-            font-size: 120px;
-            line-height: 83%;
+            @include responsive-font('display');
             letter-spacing: -0.02em;
             text-align: center;
             color: var(--td-theme-1);
-            @media #{$md,$sm} {
-                font-size: 80px;
-            }
-            @media #{$sm} {
-                font-size: 50px;
-            }
-            @media #{$xs} {
-                font-size: 30px;
-            }
         }
         &-bottom{
             border: none;
             & .td-footer-copyright p {
-                font-weight: 500;
-                font-size: 18px;
+                @include responsive-font('body');
                 color: rgba(255, 255, 255, 0.65);
                 & a{
                     font-weight: 700;

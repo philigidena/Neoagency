@@ -1,24 +1,63 @@
 
+/*============================================
+    NEO MARKETING - CUSTOM FONT SYSTEM
+    
+    Purpose-Based Font Hierarchy:
+    
+    TGSPerfectCondensed: 
+    - Hero titles, big display text
+    - Use when you need maximum impact in condensed space
+    
+    Grift (Symmetric & Rounded):
+    - ExtraBold/Black: Primary headings (H1, H2)
+    - Bold/SemiBold: Secondary headings (H3, H4)
+    - Medium: Subheadings, emphasized body text
+    - Regular: Body text, paragraphs
+    - Light: Captions, fine print
+==============================================*/
 
+// No external font URL needed - using custom fonts only
+$font-url: '';
 
-// font url
-
-$font-url: 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bellefair&family=Roboto:ital,wght@0,100..900;1,100..900&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Teko:wght@300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap';
-
-
-// font family
+// Font Family Variables
 $font-family: (
     'ff': (
-        'body': '"Inter", serif',
-        'heading': '"Plus Jakarta Sans", serif',
-        'dm': '"DM Serif Display", serif',
-        'dm-sans': '"DM Sans", sans-serif',
-        'manrope': '"Manrope", serif',
-        'bebas': '"Bebas Neue", serif',
-        'teko': '"Teko", sans-serif',
-        'rethink': '"Rethink Sans", serif',
-        'bellefair': '"Bellefair", serif',
-        'roboto': '"Roboto", serif',
+        'display': '"TGSPerfectCondensed", sans-serif',
+        'heading': '"Grift", sans-serif',
+        'body': '"Grift", sans-serif',
         'fontawesome': '"Font Awesome 6 Pro"',
     )
 );
+
+/*============================================
+    FONT SIZE HIERARCHY
+    
+    Responsive sizing with desktop/mobile values
+==============================================*/
+
+// Font sizes map with custom fonts
+$font-sizes: (
+    // Display - TGSPerfectCondensed for hero/big titles
+    'display': (desktop: 80px, mobile: 44px, line-height: 1.0, weight: normal, family: 'display'),
+    
+    // Primary Headings - Grift ExtraBold/Black
+    'h1': (desktop: 64px, mobile: 36px, line-height: 1.15, weight: 800, family: 'heading'),
+    'h2': (desktop: 52px, mobile: 32px, line-height: 1.2, weight: 800, family: 'heading'),
+    
+    // Secondary Headings - Grift Bold/SemiBold
+    'h3': (desktop: 40px, mobile: 26px, line-height: 1.3, weight: 700, family: 'heading'),
+    'h4': (desktop: 28px, mobile: 22px, line-height: 1.4, weight: 600, family: 'heading'),
+    'h5': (desktop: 22px, mobile: 19px, line-height: 1.4, weight: 600, family: 'heading'),
+    'h6': (desktop: 19px, mobile: 17px, line-height: 1.5, weight: 600, family: 'heading'),
+    
+    // Body Text - Grift Medium/Regular
+    'body-lg': (desktop: 22px, mobile: 19px, line-height: 1.6, weight: 500, family: 'body'),
+    'body': (desktop: 18px, mobile: 16px, line-height: 1.65, weight: 400, family: 'body'),
+    'body-sm': (desktop: 16px, mobile: 14px, line-height: 1.6, weight: 400, family: 'body'),
+    
+    // Fine Print - Grift Light
+    'caption': (desktop: 14px, mobile: 12px, line-height: 1.5, weight: 300, family: 'body'),
+);
+
+// Breakpoints
+$mobile-breakpoint: 768px;

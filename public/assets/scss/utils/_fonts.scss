@@ -1,0 +1,207 @@
+/*============================================
+    NEO MARKETING - CUSTOM FONTS
+    
+    TGSPerfectCondensed: Bold, impactful hero titles
+    Grift Family: Symmetric, rounded font for headings and body
+==============================================*/
+
+// TGSPerfectCondensed - For big, impactful statements
+@font-face {
+    font-family: 'TGSPerfectCondensed';
+    src: url('/assets/fonts/TGSPerfectCondensed.woff2') format('woff2'),
+         url('/assets/fonts/TGSPerfectCondensed.woff') format('woff'),
+         url('/assets/fonts/TGSPerfectCondensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Grift - Thin (100)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Thin.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Thin.woff') format('woff'),
+         url('/assets/fonts/Grift-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-ThinItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-ThinItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - ExtraLight (200)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-ExtraLight.woff2') format('woff2'),
+         url('/assets/fonts/Grift-ExtraLight.woff') format('woff'),
+         url('/assets/fonts/Grift-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-ExtraLightItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-ExtraLightItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - Light (300)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Light.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Light.woff') format('woff'),
+         url('/assets/fonts/Grift-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-LightItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-LightItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - Regular (400)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Regular.woff') format('woff'),
+         url('/assets/fonts/Grift-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Italic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Italic.woff') format('woff'),
+         url('/assets/fonts/Grift-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - Medium (500)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Medium.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Medium.woff') format('woff'),
+         url('/assets/fonts/Grift-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-MediumItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-MediumItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - SemiBold (600)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-SemiBold.woff2') format('woff2'),
+         url('/assets/fonts/Grift-SemiBold.woff') format('woff'),
+         url('/assets/fonts/Grift-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-SemiBoldItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-SemiBoldItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - Bold (700)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Bold.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Bold.woff') format('woff'),
+         url('/assets/fonts/Grift-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-BoldItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-BoldItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - ExtraBold (800)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-ExtraBold.woff2') format('woff2'),
+         url('/assets/fonts/Grift-ExtraBold.woff') format('woff'),
+         url('/assets/fonts/Grift-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-ExtraBoldItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-ExtraBoldItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Grift - Black (900)
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-Black.woff2') format('woff2'),
+         url('/assets/fonts/Grift-Black.woff') format('woff'),
+         url('/assets/fonts/Grift-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grift';
+    src: url('/assets/fonts/Grift-BlackItalic.woff2') format('woff2'),
+         url('/assets/fonts/Grift-BlackItalic.woff') format('woff'),
+         url('/assets/fonts/Grift-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+

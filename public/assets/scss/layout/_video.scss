@@ -34,10 +34,7 @@
             }
         }
         &-title{
-            font-family: var(--td-ff-teko);
-            font-weight: 500;
-            font-size: 40px;
-            line-height: 1;
+            @include responsive-font('h3');
             color: var(--td-theme-1);
         }
     }

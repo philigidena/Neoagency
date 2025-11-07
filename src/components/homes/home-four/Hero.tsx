@@ -5,14 +5,18 @@ const Hero = () => {
          <div className="td-hero-area td-hero-4-spacing td-btn-trigger p-relative fix z-index-1">
             <div className="container">
                <div className="row align-items-center">
-                  <div className="col-xl-5">
-                     <div className="td-hero-4-title mb-30">
+                  <div className="col-xl-5 col-lg-6 col-md-12">
+                     <div className="td-hero-4-title-large mb-30">
                         <h2 className="td-split-text td-split-in-right">
-                           HIDDEN SCIENCE BEHIND STORYTELLING
+                           <span className="d-none d-md-inline">WHERE<br />
+                           STORYTELLING<br />
+                           MEETS<br />
+                           SCIENCE</span>
+                           <span className="d-md-none">WHERE STORYTELLING<br />MEETS SCIENCE</span>
                         </h2>
                      </div>
                   </div>
-                  <div className="col-xl-7">
+                  <div className="col-xl-7 col-lg-6 col-md-12">
                      <div className="td-hero-4-thumb p-relative mb-30">
                         <div className="td-hero-4-circale">
                            <div className="td-hero-4-circale-inner td-btn-bounce p-relative">

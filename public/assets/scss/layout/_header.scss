@@ -83,8 +83,8 @@
                 border: none;
             }
             & .tdmenu__navbar-wrap > ul > li a {
+                @include responsive-font('body-sm');
                 color: rgba(255, 255, 255, 0.65);
-                font-size: 16px;
                 text-transform: uppercase;
                 padding: 25px 0px;
             }

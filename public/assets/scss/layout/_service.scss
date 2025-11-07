@@ -139,26 +139,19 @@
     &-4{
         &-count{
             & .count{
-                font-family: var(--td-ff-roboto);
-                font-weight: 500;
-                font-size: 20px;
+                @include responsive-font('body');
                 letter-spacing: -0.02em;
                 color: var(--td-common-yellow);
             }
             & .title{
-                font-family: var(--td-ff-teko);
-                font-weight: 500;
-                font-size: 40px;
-                line-height: 1;
+                @include responsive-font('h3');
                 color: #fff;
             }
         }
         &-text{
             & p{
-                font-weight: 400;
-                font-size: 18px;
+                @include responsive-font('body');
                 color: var(--td-grey-3);
-                line-height: 32px;
             }
         }
         &-icon{
