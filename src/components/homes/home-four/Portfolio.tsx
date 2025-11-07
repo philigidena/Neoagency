@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import type { JSX } from "react";
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface DataType {
    id: number;
@@ -51,7 +51,7 @@ const setting = {
       crossFade: true
    },
    autoplay: {
-      delay: 10000,
+      delay: 15000,
       disableOnInteraction: false,
    },
    navigation: {
@@ -62,14 +62,87 @@ const setting = {
 
 const Portfolio = () => {
    const [activeSlide, setActiveSlide] = useState<number>(0);
-   const [mutedVideos, setMutedVideos] = useState<{ [key: number]: boolean }>({});
+   const [mutedVideos, setMutedVideos] = useState<{ [key: number]: boolean }>({
+      1: true,
+      2: true,
+      3: true
+   });
+   const [loadedVideos, setLoadedVideos] = useState<Set<number>>(new Set([1])); // Only load first video initially
+   const iframeRefs = useRef<{ [key: number]: HTMLIFrameElement | null }>({});
 
-   const toggleMute = (videoId: number) => {
+   const sendVimeoCommand = (itemId: number, method: string, value?: any) => {
+      const iframe = iframeRefs.current[itemId];
+      if (iframe && iframe.contentWindow) {
+         const message = value !== undefined 
+            ? JSON.stringify({ method, value })
+            : JSON.stringify({ method });
+         iframe.contentWindow.postMessage(message, 'https://player.vimeo.com');
+      }
+   };
+
+   const toggleMute = (itemId: number) => {
+      const newMutedState = !mutedVideos[itemId];
+      
       setMutedVideos(prev => ({
          ...prev,
-         [videoId]: !prev[videoId]
+         [itemId]: newMutedState
       }));
+
+      // Send mute/unmute command
+      sendVimeoCommand(itemId, 'setVolume', newMutedState ? 0 : 1);
    };
+
+   // Initialize first video on mount
+   useEffect(() => {
+      const initTimer = setTimeout(() => {
+         // Play the first video when component mounts
+         sendVimeoCommand(1, 'play');
+         sendVimeoCommand(1, 'setVolume', mutedVideos[1] ? 0 : 1);
+      }, 500);
+      
+      return () => clearTimeout(initTimer);
+   }, []);
+
+   // Load adjacent videos for smooth transitions and manage playback
+   useEffect(() => {
+      // Calculate the correct active item ID using modulo for loop mode
+      const activeItemId = (activeSlide % project_data.length) + 1;
+      
+      // Calculate adjacent slides for preloading
+      const nextItemId = ((activeSlide + 1) % project_data.length) + 1;
+      const prevItemId = ((activeSlide - 1 + project_data.length) % project_data.length) + 1;
+      
+      // Load current, next, and previous videos
+      setLoadedVideos(prev => {
+         const newSet = new Set(prev);
+         newSet.add(activeItemId);
+         newSet.add(nextItemId);
+         newSet.add(prevItemId);
+         return newSet;
+      });
+      
+      // Small delay to ensure slide transition is complete
+      const timer = setTimeout(() => {
+         project_data.forEach((item) => {
+            const itemId = item.id;
+            
+            if (itemId !== activeItemId) {
+               // Pause non-active videos
+               sendVimeoCommand(itemId, 'pause');
+            } else {
+               // Play active video
+               sendVimeoCommand(itemId, 'play');
+               
+               // Set volume based on mute state
+               setTimeout(() => {
+                  sendVimeoCommand(itemId, 'setVolume', mutedVideos[itemId] ? 0 : 1);
+               }, 200);
+            }
+         });
+      }, 150);
+      
+      return () => clearTimeout(timer);
+   }, [activeSlide]);
 
    return (
       <div className="td-portfolio-area" style={{ 
@@ -142,7 +215,7 @@ const Portfolio = () => {
                               }}>
                                  <div className="row g-0 align-items-center">
                                     {/* Video Player */}
-                                    <div className="col-lg-8">
+                                    <div className="col-lg-8 col-12">
                                        <div style={{ 
                                           position: 'relative',
                                           paddingTop: '56.25%',
@@ -150,22 +223,45 @@ const Portfolio = () => {
                                           overflow: 'hidden',
                                           borderRadius: '10px 0 0 10px',
                                        }}>
-                                          {/* Vimeo iFrame - Autoplays muted */}
-                                          <iframe
-                                             key={`${item.videoId}-${mutedVideos[item.id] ? 'muted' : 'unmuted'}`}
-                                             src={`https://player.vimeo.com/video/${item.videoId}?autoplay=1&loop=1&autopause=0&muted=${mutedVideos[item.id] !== false ? '1' : '0'}&title=0&byline=0&portrait=0&controls=1&background=0`}
-                                             style={{
+                                          {/* Conditionally render video or placeholder */}
+                                          {loadedVideos.has(item.id) ? (
+                                             <iframe
+                                                ref={(el) => {
+                                                   if (el) iframeRefs.current[item.id] = el;
+                                                }}
+                                                src={`https://player.vimeo.com/video/${item.videoId}?api=1&player_id=vimeo_${item.id}&autoplay=0&loop=1&muted=1&title=0&byline=0&portrait=0&controls=1&quality=auto&dnt=1&responsive=1`}
+                                                style={{
+                                                   position: 'absolute',
+                                                   top: 0,
+                                                   left: 0,
+                                                   width: '100%',
+                                                   height: '100%',
+                                                   border: 'none'
+                                                }}
+                                                allow="autoplay; fullscreen; picture-in-picture"
+                                                allowFullScreen
+                                                title={`${item.client} Video`}
+                                                id={`vimeo_${item.id}`}
+                                             />
+                                          ) : (
+                                             // Placeholder for unloaded videos
+                                             <div style={{
                                                 position: 'absolute',
                                                 top: 0,
                                                 left: 0,
                                                 width: '100%',
                                                 height: '100%',
-                                                border: 'none'
-                                             }}
-                                             allow="autoplay; fullscreen; picture-in-picture"
-                                             allowFullScreen
-                                             title={`${item.client} Video`}
-                                          />
+                                                background: 'linear-gradient(135deg, #0a1e15 0%, #1a3a2e 100%)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
+                                             }}>
+                                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <circle cx="12" cy="12" r="10" stroke="#91ed91" strokeWidth="1" opacity="0.3"/>
+                                                   <path d="M10 8L16 12L10 16V8Z" fill="#91ed91" opacity="0.5"/>
+                                                </svg>
+                                             </div>
+                                          )}
                                           
                                           {/* Elegant Mute/Unmute Button */}
                                           <div style={{
@@ -180,9 +276,9 @@ const Portfolio = () => {
                                                    width: '56px',
                                                    height: '56px',
                                                    borderRadius: '50%',
-                                                   background: mutedVideos[item.id] === false ? '#91ed91' : 'rgba(10, 30, 21, 0.8)',
+                                                   background: !mutedVideos[item.id] ? '#91ed91' : 'rgba(10, 30, 21, 0.8)',
                                                    border: '2px solid #91ed91',
-                                                   color: mutedVideos[item.id] === false ? '#0a1e15' : '#91ed91',
+                                                   color: !mutedVideos[item.id] ? '#0a1e15' : '#91ed91',
                                                    cursor: 'pointer',
                                                    transition: 'all 0.3s ease',
                                                    display: 'flex',
@@ -199,9 +295,9 @@ const Portfolio = () => {
                                                    e.currentTarget.style.transform = 'scale(1)';
                                                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
                                                 }}
-                                                aria-label={mutedVideos[item.id] === false ? 'Mute video' : 'Unmute video'}
+                                                aria-label={!mutedVideos[item.id] ? 'Mute video' : 'Unmute video'}
                                              >
-                                                {mutedVideos[item.id] === false ? (
+                                                {!mutedVideos[item.id] ? (
                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                       <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                                       <path d="M15.54 8.46a5 5 0 0 1 0 7.07" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -253,14 +349,16 @@ const Portfolio = () => {
                                     </div>
 
                                     {/* Project Info */}
-                                    <div className="col-lg-4">
+                                    <div className="col-lg-4 col-12">
                                        <div style={{ 
                                           padding: '60px 50px',
                                           height: '100%',
                                           display: 'flex',
                                           flexDirection: 'column',
                                           justifyContent: 'center'
-                                       }}>
+                                       }}
+                                       className="td-portfolio-info-responsive"
+                                       >
                                           <div style={{ 
                                              display: 'inline-block',
                                              padding: '6px 16px',

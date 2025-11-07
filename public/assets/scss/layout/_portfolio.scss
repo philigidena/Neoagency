@@ -835,3 +835,37 @@
         }
     }
 }
+
+// Responsive styles for portfolio info section
+.td-portfolio-info-responsive {
+    @media #{$md,$sm,$xs} {
+        padding: 40px 30px !important;
+    }
+    @media #{$xs} {
+        padding: 30px 20px !important;
+    }
+}
+
+// Video container responsive border radius
+.td-portfolio-area {
+    @media #{$md,$sm,$xs} {
+        padding: 80px 0 !important;
+    }
+    
+    // Fix video container border radius on mobile
+    .col-lg-8 {
+        @media #{$md,$sm,$xs} {
+            > div {
+                border-radius: 10px 10px 0 0 !important;
+            }
+        }
+    }
+    
+    // Navigation buttons mobile adjustment
+    .portfolio-button-prev,
+    .portfolio-button-next {
+        @media #{$md,$sm,$xs} {
+            display: none !important;
+        }
+    }
+}
