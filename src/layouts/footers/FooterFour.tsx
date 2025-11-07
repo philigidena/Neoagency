@@ -31,15 +31,126 @@ const FooterFour = () => {
                      </div>
                   </div>
                   <div className="col-12">
-                     <div className="td-footer-4-contact mb-50">
-                        <div className="row justify-content-center text-center">
-                           <div className="col-lg-8">
-                              <h3 className="mb-30" style={{ color: '#91ed91', fontSize: '32px' }}>Get in Touch:</h3>
-                              <div className="mb-20">
-                                 <a href="tel:+251955927981" style={{ color: '#fff', fontSize: '20px', display: 'block', marginBottom: '10px' }}>+251-955-927-981</a>
-                                 <a href="tel:+251910219336" style={{ color: '#fff', fontSize: '20px', display: 'block', marginBottom: '10px' }}>+251-910-219-336</a>
+                     <div className="td-footer-4-contact-modern mb-50" style={{
+                        padding: '35px 30px',
+                        borderRadius: '16px',
+                        background: 'rgba(20, 50, 35, 0.6)',
+                        border: '1px solid rgba(145, 237, 145, 0.25)',
+                     }}>
+                        <div className="row align-items-center g-3">
+                           <div className="col-lg-3">
+                              <div style={{ textAlign: 'left' }}>
+                                 <span style={{
+                                    fontSize: '13px',
+                                    fontWeight: '600',
+                                    color: '#91ed91',
+                                    letterSpacing: '1px',
+                                    textTransform: 'uppercase',
+                                    display: 'block',
+                                    marginBottom: '5px'
+                                 }}>Get in Touch</span>
+                                 <h4 style={{ 
+                                    color: '#fff', 
+                                    fontSize: '20px',
+                                    fontWeight: '700',
+                                    marginBottom: '0',
+                                    lineHeight: '1.3',
+                                 }}>
+                                    Let's Work <span style={{ color: '#91ed91' }}>Together</span>
+                                 </h4>
                               </div>
-                              <a href="mailto:neomarketingsolutions@gmail.com" style={{ color: '#91ed91', fontSize: '18px' }}>neomarketingsolutions@gmail.com</a>
+                           </div>
+                           
+                           <div className="col-lg-4">
+                              <div style={{
+                                 display: 'flex',
+                                 alignItems: 'center',
+                                 gap: '12px',
+                                 padding: '12px 0',
+                                 borderLeft: '2px solid rgba(145, 237, 145, 0.2)',
+                                 paddingLeft: '20px'
+                              }}>
+                                 <div style={{
+                                    width: '40px',
+                                    height: '40px',
+                                    borderRadius: '10px',
+                                    background: 'linear-gradient(135deg, #91ed91 0%, #7FFF00 100%)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    flexShrink: 0
+                                 }}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="#000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                 </div>
+                                 <div>
+                                    <a href="tel:+251955927981" style={{ 
+                                       color: '#fff', 
+                                       fontSize: '15px', 
+                                       display: 'block', 
+                                       textDecoration: 'none',
+                                       marginBottom: '3px',
+                                       fontWeight: '500'
+                                    }}>
+                                       +251-955-927-981
+                                    </a>
+                                    <a href="tel:+251910219336" style={{ 
+                                       color: '#fff', 
+                                       fontSize: '15px', 
+                                       display: 'block',
+                                       textDecoration: 'none',
+                                       fontWeight: '500'
+                                    }}>
+                                       +251-910-219-336
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div className="col-lg-5">
+                              <div style={{
+                                 display: 'flex',
+                                 alignItems: 'center',
+                                 gap: '12px',
+                                 padding: '12px 0',
+                                 borderLeft: '2px solid rgba(145, 237, 145, 0.2)',
+                                 paddingLeft: '20px'
+                              }}>
+                                 <div style={{
+                                    width: '40px',
+                                    height: '40px',
+                                    borderRadius: '10px',
+                                    background: 'linear-gradient(135deg, #91ed91 0%, #7FFF00 100%)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    flexShrink: 0
+                                 }}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#000"/>
+                                       <path d="M22 6L12 13L2 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                 </div>
+                                 <div>
+                                    <a href="mailto:neomarketingsolutions@gmail.com" style={{ 
+                                       color: '#fff', 
+                                       fontSize: '15px',
+                                       textDecoration: 'none',
+                                       fontWeight: '500',
+                                       wordBreak: 'break-word'
+                                    }}>
+                                       neomarketingsolutions@gmail.com
+                                    </a>
+                                    <p style={{
+                                       fontSize: '12px',
+                                       color: 'rgba(255,255,255,0.6)',
+                                       margin: '3px 0 0 0'
+                                    }}>
+                                       Mon-Fri, 9:00 AM - 6:00 PM EAT
+                                    </p>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>

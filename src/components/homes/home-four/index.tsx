@@ -1,5 +1,4 @@
 import About from "./About"
-import AwardArea from "./AwardArea"
 import Blog from "./Blog"
 import Counter from "./Counter"
 import Hero from "./Hero"
@@ -34,7 +33,6 @@ const HomeFour = () => {
                   <Service />
                   <VideoArea />
                   <ProductionWorks />
-                  <AwardArea />
                   <Team />
                   <Faq />
                   <Blog />

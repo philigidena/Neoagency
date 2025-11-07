@@ -2,7 +2,6 @@ import TeamArea from "./TeamArea"
 import Brand from "./Brand"
 import HeaderFour from "../../../../layouts/headers/HeaderFour"
 import BreadcrumbTwo from "../../../common/BreadcrumbTwo"
-import Cta from "../../../common/Cta"
 import FooterFour from "../../../../layouts/footers/FooterFour"
 import MatrixRainPattern from "../../../common/MatrixRainPattern"
 
@@ -26,7 +25,6 @@ const Team = () => {
                   />
                   <TeamArea />
                   <Brand />
-                  <Cta />
                </main>
                <FooterFour />
             </div>

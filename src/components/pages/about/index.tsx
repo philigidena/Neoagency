@@ -1,7 +1,6 @@
 import AboutArea from "./AboutArea"
 import Feature from "./Feature"
 import Team from "./Team"
-import Awards from "./Awards"
 import HeaderFour from "../../../layouts/headers/HeaderFour"
 import FooterFour from "../../../layouts/footers/FooterFour"
 import MatrixRainPattern from "../../common/MatrixRainPattern"
@@ -23,7 +22,6 @@ const About = () => {
                   <AboutArea />
                   <Feature />
                   <Team />
-                  <Awards />
                </main>
                <FooterFour />
             </div>

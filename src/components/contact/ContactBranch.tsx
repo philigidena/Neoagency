@@ -23,8 +23,10 @@ const ContactBranch = () => {
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
                            <div className="td-contact-branch-lucation ml-40 mb-20">
-                              <h5 className="td-contact-branch-lucation-title">Addis Ababa, Ethiopia</h5>
-                              <Link className="lucation mb-110" to="#">Where Storytelling Meets Science</Link>
+                              <h5 className="td-contact-branch-lucation-title">Our Office</h5>
+                              <Link className="lucation mb-30" to="#">22 Bata Complex Building</Link>
+                              <Link className="lucation mb-30" to="#">Around Gollagul Tower</Link>
+                              <Link className="lucation mb-30" to="#">Addis Ababa, Ethiopia</Link>
                            </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
