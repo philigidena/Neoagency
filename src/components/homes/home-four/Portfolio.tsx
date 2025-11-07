@@ -17,26 +17,26 @@ const project_data: DataType[] = [
    {
       id: 1,
       videoId: "1134206849",
-      date: "Marketing Campaign",
-      client: "SARA",
-      title: (<>BEDROOM SOLUTION</>),
-      description: "Complete brand campaign and marketing strategy for Sara's bedroom furniture line"
+      date: "TV Series",
+      client: "Dopamine Studios",
+      title: (<>2 GUADA</>),
+      description: "An interactive kitchen show where a husband, wife, and mother-in-law navigate family dynamics. The wife and mother cook separate meals, and the husband chooses the winner while the family talks through and resolves their issues."
    },
    {
       id: 2,
       videoId: "1134213403",
-      date: "Brand Campaign",
-      client: "LA MAISON",
-      title: (<>LUXURY BRANDING</>),
-      description: "Creative direction & full production for luxury home brand"
+      date: "Documentary Series",
+      client: "Dopamine Studios",
+      title: (<>THE SMALL KITCHEN</>),
+      description: "Adoptees from different countries return to Ethiopia to share their experiences about adoption corruption and discovering they have living relatives. The show explores diverse cultural backgrounds through food and personal stories."
    },
    {
       id: 3,
       videoId: "1134207289",
-      date: "Brand Identity",
-      client: "KAL",
-      title: (<>MAKEUP SCHOOL</>),
-      description: "Brand identity & content creation for beauty education"
+      date: "Sitcom Series",
+      client: "Dopamine Studios",
+      title: (<>BALETARIKOCHU</>),
+      description: "A sitcom series featuring different actors who portray unique characters and tell extraordinary stories. Every episode brings new characters and narratives, showcasing diverse scenarios and comedic situations."
    },
 ];
 
@@ -101,10 +101,10 @@ const Portfolio = () => {
                            color: '#91ed91',
                         }}
                      >
-                        // OUR WORK
+                        // FROM DOPAMINE STUDIOS
                      </span>
                      <h2 className="td-section-4-title mb-20">
-                        FEATURED PROJECTS
+                        FEATURED PRODUCTIONS
                      </h2>
                      <p style={{ 
                         color: 'rgba(255, 255, 255, 0.6)', 
@@ -114,7 +114,7 @@ const Portfolio = () => {
                         lineHeight: '1.6',
                         fontFamily: 'var(--td-ff-body)'
                      }}>
-                        Explore our latest campaigns and creative work
+                        Award-winning TV series and documentaries from our production house
                      </p>
                   </div>
                </div>
