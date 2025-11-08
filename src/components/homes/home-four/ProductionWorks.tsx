@@ -10,13 +10,13 @@ interface ProductionType {
 const production_data: ProductionType[] = [
    {
       id: 1,
-      thumb: "/The_small_kitchen.png",
+      thumb: "/The Small Kitchen_2.jpg",
       title: "The Small Kitchen",
       subtitle: "Cooking Show"
    },
    {
       id: 2,
-      thumb: "/Baletarikochu.png",
+      thumb: "/Baletarikochu.jpg",
       title: "Baletarikochu",
       subtitle: "Entertainment Series"
    },
@@ -28,7 +28,7 @@ const production_data: ProductionType[] = [
    },
    {
       id: 4,
-      thumb: "/Studio_30.png",
+      thumb: "/Studio_30_thumbnail.jpg",
       title: "Studio 30",
       subtitle: "Talk Show"
    },
