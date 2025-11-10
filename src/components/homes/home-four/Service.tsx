@@ -106,13 +106,11 @@ const Service = () => {
                         lineHeight: '1.15',
                         color: '#fff',
                         letterSpacing: '-1px',
+                        textAlign: 'center',
                      }}>
                         <SplitTextWrapper direction="right">
                            FULL-HOUSE MARKETING <span style={{
-                              background: 'linear-gradient(135deg, #7FFF00 0%, #00FF7F 100%)',
-                              WebkitBackgroundClip: 'text',
-                              WebkitTextFillColor: 'transparent',
-                              backgroundClip: 'text',
+                              color: '#7FFF00',
                            }}>SOLUTIONS</span>
                         </SplitTextWrapper>
                      </h2>
