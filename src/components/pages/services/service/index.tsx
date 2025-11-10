@@ -4,6 +4,7 @@ import BreadcrumbTwo from "../../../common/BreadcrumbTwo"
 import MatrixRainPattern from "../../../common/MatrixRainPattern"
 import ServiceArea from "./ServiceArea"
 import ServiceItem from "./ServiceItem"
+import Packages from "../../../homes/home-four/Packages"
 
 const Service = () => {
    return (
@@ -24,6 +25,7 @@ const Service = () => {
                      desc="Neo is a full-house marketing agency offering end-to-end solutions through a wide range of specialized services. From strategy to execution, we bring your brand vision to life."
                   />
                   <ServiceArea />
+                  <Packages />
                   <ServiceItem />
                </main>
                <FooterFour />

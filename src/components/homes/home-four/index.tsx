@@ -8,6 +8,7 @@ import Team from "./Team"
 import VideoArea from "./VideoArea"
 import Faq from "./Faq"
 import ProductionWorks from "./ProductionWorks"
+import Packages from "./Packages"
 import HeaderFour from "../../../layouts/headers/HeaderFour"
 import FooterFour from "../../../layouts/footers/FooterFour"
 import MatrixRainPattern from "../../common/MatrixRainPattern"
@@ -31,6 +32,7 @@ const HomeFour = () => {
                   <About />
                   <Portfolio />
                   <Service />
+                  <Packages />
                   <VideoArea />
                   <ProductionWorks />
                   <Team />
