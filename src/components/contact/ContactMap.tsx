@@ -7,13 +7,19 @@ const ContactMap = () => {
             <div className="row">
                <div className="col-12">
                   <div className="td-contact-map p-relative">
-                     <div className="td-contact-map-wrap" style={{
+                     <div style={{
                         padding: '40px 35px',
                         borderRadius: '16px',
                         background: 'rgba(15, 40, 28, 0.96)',
                         backdropFilter: 'blur(10px)',
                         border: '1px solid rgba(145, 237, 145, 0.25)',
                         boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+                        position: 'absolute',
+                        right: '250px',
+                        top: '-120px',
+                        zIndex: 2,
+                        width: '350px',
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='5' y='15' font-family='monospace' font-size='12' fill='rgba(145, 237, 145, 0.08)'%3E1%3C/text%3E%3Ctext x='25' y='35' font-family='monospace' font-size='12' fill='rgba(145, 237, 145, 0.08)'%3E0%3C/text%3E%3Ctext x='45' y='55' font-family='monospace' font-size='12' fill='rgba(145, 237, 145, 0.08)'%3E1%3C/text%3E%3C/svg%3E")`,
                      }}>
                         <h3 style={{
                            fontSize: '36px',

@@ -1,6 +1,5 @@
 import ContactMap from "./ContactMap"
 import ContactArea from "./ContactArea"
-import ContactBranch from "./ContactBranch"
 import Breadcrumb from "./Breadcrumb"
 import HeaderFour from "../../layouts/headers/HeaderFour"
 import FooterFour from "../../layouts/footers/FooterFour"
@@ -23,7 +22,6 @@ const Contact = () => {
                   <Breadcrumb />
                   <ContactMap />
                   <ContactArea />
-                  <ContactBranch />
                </main>
                <FooterFour />
             </div>
