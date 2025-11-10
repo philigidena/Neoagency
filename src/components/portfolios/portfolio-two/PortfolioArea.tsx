@@ -10,16 +10,51 @@ const PortfolioArea = () => {
    const [selectedFilter, setSelectedFilter] = useState("*");
 
    useEffect(() => {
-      if (Isotope) {
-         isotope.current = new Isotope(".grid", {
-            itemSelector: ".grid-item",
-            layoutMode: "fitRows",
-         });
+      // Add delay to ensure lazy-loaded content is rendered
+      const initTimer = setTimeout(() => {
+         if (Isotope) {
+            const gridElement = document.querySelector(".grid");
+            if (!gridElement) return;
 
-         return () => {
-            isotope.current?.destroy();
-         };
-      }
+            // Wait for images to load before initializing Isotope
+            const images = gridElement.querySelectorAll("img");
+            let loadedImages = 0;
+
+            const checkAllImagesLoaded = () => {
+               loadedImages++;
+               if (loadedImages === images.length) {
+                  // Initialize Isotope after all images are loaded
+                  isotope.current = new Isotope(".grid", {
+                     itemSelector: ".grid-item",
+                     layoutMode: "fitRows",
+                  });
+               }
+            };
+
+            if (images.length === 0) {
+               // No images, initialize immediately
+               isotope.current = new Isotope(".grid", {
+                  itemSelector: ".grid-item",
+                  layoutMode: "fitRows",
+               });
+            } else {
+               // Wait for each image to load
+               images.forEach((img) => {
+                  if (img.complete) {
+                     checkAllImagesLoaded();
+                  } else {
+                     img.addEventListener("load", checkAllImagesLoaded);
+                     img.addEventListener("error", checkAllImagesLoaded); // Handle errors too
+                  }
+               });
+            }
+         }
+      }, 300);
+
+      return () => {
+         clearTimeout(initTimer);
+         isotope.current?.destroy();
+      };
    }, []);
 
    useEffect(() => {
