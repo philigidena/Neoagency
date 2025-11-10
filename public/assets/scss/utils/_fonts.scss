@@ -2,7 +2,7 @@
     NEO MARKETING - CUSTOM FONTS
     
     TGSPerfectCondensed: Bold, impactful hero titles
-    Grift Family: Symmetric, rounded font for headings and body
+    Helvena: Clean, professional font for headings and body
 ==============================================*/
 
 // TGSPerfectCondensed - For big, impactful statements
@@ -16,7 +16,87 @@
     font-display: swap;
 }
 
+// Helvena - Extralight (200)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Light (300)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Regular (400)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Medium (500)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Semibold (600)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Bold (700)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Extrabold (800)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Helvena - Black (900)
+@font-face {
+    font-family: 'Helvena';
+    src: url('/assets/fonts/Helvena-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*============================================
+    GRIFT FONTS - DEPRECATED
+    
+    Replaced with Helvena font.
+    Keeping declarations commented for reference.
+==============================================*/
+
 // Grift - Thin (100)
+/*
 @font-face {
     font-family: 'Grift';
     src: url('/assets/fonts/Grift-Thin.woff2') format('woff2'),
@@ -204,4 +284,4 @@
     font-style: italic;
     font-display: swap;
 }
-
+*/

@@ -1,7 +1,7 @@
 # Neo Marketing - Custom Font System
 
 ## Overview
-Your website now uses a purposeful custom font system featuring **TGSPerfectCondensed** and **Grift** font families.
+Your website now uses a purposeful custom font system featuring **TGSPerfectCondensed** and **Helvena** font families.
 
 ---
 
@@ -12,18 +12,17 @@ Your website now uses a purposeful custom font system featuring **TGSPerfectCond
 - **Use when**: You need maximum visual impact in condensed space
 - **Character**: Bold, condensed, attention-grabbing
 
-### 2. **Grift** (Symmetric & Rounded)
+### 2. **Helvena** (Clean & Professional)
 - **Purpose**: Versatile font for all other text (headings and body)
-- **Character**: Symmetric, rounded, modern, professional
+- **Character**: Clean, professional, modern
 - **Available Weights**:
-  - Thin (100)
-  - ExtraLight (200)
+  - Extralight (200)
   - Light (300)
   - Regular (400)
   - Medium (500)
-  - SemiBold (600)
+  - Semibold (600)
   - Bold (700)
-  - ExtraBold (800)
+  - Extrabold (800)
   - Black (900)
 
 ---
@@ -40,20 +39,20 @@ Your website now uses a purposeful custom font system featuring **TGSPerfectCond
   - Big impact statements
   - Call-to-action text in large sections
 
-### Primary Headings (Grift ExtraBold/Black)
+### Primary Headings (Helvena Extrabold/Bold)
 #### H1
 - **Size**: 64px desktop / 36px mobile
-- **Weight**: 800 (ExtraBold)
+- **Weight**: 800 (Extrabold)
 - **Line Height**: 1.15
 - **Usage**: Main page titles, section headers
 
 #### H2
 - **Size**: 52px desktop / 32px mobile
-- **Weight**: 800 (ExtraBold)
+- **Weight**: 800 (Extrabold)
 - **Line Height**: 1.2
 - **Usage**: Major section titles
 
-### Secondary Headings (Grift Bold/SemiBold)
+### Secondary Headings (Helvena Bold/Semibold)
 #### H3
 - **Size**: 40px desktop / 26px mobile
 - **Weight**: 700 (Bold)
@@ -62,23 +61,23 @@ Your website now uses a purposeful custom font system featuring **TGSPerfectCond
 
 #### H4
 - **Size**: 28px desktop / 22px mobile
-- **Weight**: 600 (SemiBold)
+- **Weight**: 600 (Semibold)
 - **Line Height**: 1.4
 - **Usage**: Component titles, smaller sections
 
 #### H5
 - **Size**: 22px desktop / 19px mobile
-- **Weight**: 600 (SemiBold)
+- **Weight**: 600 (Semibold)
 - **Line Height**: 1.4
 - **Usage**: Small headings, emphasized labels
 
 #### H6
 - **Size**: 19px desktop / 17px mobile
-- **Weight**: 600 (SemiBold)
+- **Weight**: 600 (Semibold)
 - **Line Height**: 1.5
 - **Usage**: Tiny headings, form labels
 
-### Body Text (Grift Medium/Regular)
+### Body Text (Helvena Medium/Regular)
 #### Body Large
 - **Size**: 22px desktop / 19px mobile
 - **Weight**: 500 (Medium)
@@ -97,7 +96,7 @@ Your website now uses a purposeful custom font system featuring **TGSPerfectCond
 - **Line Height**: 1.6
 - **Usage**: Secondary text, navigation
 
-### Fine Print (Grift Light)
+### Fine Print (Helvena Light)
 #### Caption
 - **Size**: 14px desktop / 12px mobile
 - **Weight**: 300 (Light)
@@ -114,31 +113,28 @@ Your website now uses a purposeful custom font system featuring **TGSPerfectCond
 ✅ **Footer Big Title** - "Let's Build Something Extraordinary"  
 ✅ **Portfolio Big Titles** - Large showcase titles  
 
-### Grift Usage:
+### Helvena Usage:
 
-#### Grift ExtraBold/Black (800-900):
-✅ All H1 and H2 headings across the site
-
-#### Grift Bold (700):
-✅ All H3 headings  
+#### Helvena Extrabold/Bold (700-800):
+✅ All H1, H2, and H3 headings across the site
 ✅ Service card titles  
 ✅ Team member names  
 
-#### Grift SemiBold (600):
+#### Helvena Semibold (600):
 ✅ All H4, H5, H6 headings  
 ✅ Navigation menu items  
 
-#### Grift Medium (500):
+#### Helvena Medium (500):
 ✅ Body Large text  
 ✅ Emphasized body text  
 
-#### Grift Regular (400):
+#### Helvena Regular (400):
 ✅ All standard body text  
 ✅ Paragraphs  
 ✅ Descriptions  
 ✅ Button text  
 
-#### Grift Light (300):
+#### Helvena Light (300):
 ✅ Captions  
 ✅ Small print  
 ✅ Subtle information  
@@ -172,8 +168,8 @@ All fonts automatically adjust for mobile devices at the 768px breakpoint:
 // Or use font family directly
 .my-custom-element {
     font-family: var(--td-ff-display); // TGSPerfectCondensed
-    font-family: var(--td-ff-heading); // Grift
-    font-family: var(--td-ff-body);    // Grift
+    font-family: var(--td-ff-heading); // Helvena
+    font-family: var(--td-ff-body);    // Helvena
 }
 ```
 
@@ -183,7 +179,7 @@ All fonts automatically adjust for mobile devices at the 768px breakpoint:
 
 1. ✅ **Consistent Branding**: Unified font usage across all pages
 2. ✅ **Mobile-First**: Automatic responsive scaling for all devices
-3. ✅ **Performance**: Local custom fonts load faster than Google Fonts
+3. ✅ **Performance**: Local custom fonts with optimized loading
 4. ✅ **Professional**: Purpose-driven font hierarchy
 5. ✅ **Maintainable**: Easy to update fonts site-wide from one location
 6. ✅ **Semantic**: Clear naming convention (display, h1-h6, body, caption)
@@ -198,19 +194,17 @@ public/assets/fonts/
 ├── TGSPerfectCondensed.ttf
 ├── TGSPerfectCondensed.woff
 ├── TGSPerfectCondensed.woff2
-├── Grift-Thin.ttf/woff/woff2
-├── Grift-ExtraLight.ttf/woff/woff2
-├── Grift-Light.ttf/woff/woff2
-├── Grift-Regular.ttf/woff/woff2
-├── Grift-Medium.ttf/woff/woff2
-├── Grift-SemiBold.ttf/woff/woff2
-├── Grift-Bold.ttf/woff/woff2
-├── Grift-ExtraBold.ttf/woff/woff2
-└── Grift-Black.ttf/woff/woff2
-(+ italic variants)
+├── Helvena-Extralight.woff
+├── Helvena-Light.woff
+├── Helvena-Regular.woff
+├── Helvena-Medium.woff
+├── Helvena-Semibold.woff
+├── Helvena-Bold.woff
+├── Helvena-Extrabold.woff
+└── Helvena-Black.woff
 ```
 
 ---
 
-**Build Status**: ✅ Successfully compiled and ready for deployment!
+**Build Status**: ✅ Updated to use Helvena font!
 
