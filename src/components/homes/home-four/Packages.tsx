@@ -222,12 +222,12 @@ const Packages = () => {
    return (
       <>
          {/* Packages Section */}
-         <div className="td-packages-area pt-170 pb-160" style={{ 
+         <div className="td-packages-area pt-120 pb-100" style={{ 
             background: 'linear-gradient(180deg, rgba(15, 40, 28, 1) 0%, rgba(10, 30, 21, 1) 100%)',
             position: 'relative',
          }}>
             <div className="container">
-               <div className="row mb-70">
+               <div className="row mb-50">
                   <div className="col-lg-12">
                      <div className="text-center">
                         <div className="td-packages-badge mb-25" style={{
@@ -252,15 +252,14 @@ const Packages = () => {
                            Our Packages
                         </div>
                         
-                        <h2 className="td-section-4-title mb-30" style={{ 
-                           fontSize: 'clamp(40px, 5vw, 72px)',
+                        <h2 className="td-section-4-title mb-20" style={{ 
+                           fontSize: 'clamp(36px, 5vw, 58px)',
                            lineHeight: '1.15',
                            color: '#fff',
                            fontWeight: '700',
                            letterSpacing: '-1px',
                         }}>
-                           MARKETING <br />
-                           <span style={{
+                           MARKETING <span style={{
                               background: 'linear-gradient(135deg, #91ed91 0%, #7FFF00 100%)',
                               WebkitBackgroundClip: 'text',
                               WebkitTextFillColor: 'transparent',
@@ -268,11 +267,11 @@ const Packages = () => {
                            }}>PACKAGES</span>
                         </h2>
                         
-                        <p className="td-section-4-text mx-auto mb-50" style={{ 
-                           fontSize: '20px',
-                           lineHeight: '1.8',
+                        <p className="td-section-4-text mx-auto mb-35" style={{ 
+                           fontSize: '17px',
+                           lineHeight: '1.6',
                            color: 'rgba(255, 255, 255, 0.8)',
-                           maxWidth: '700px'
+                           maxWidth: '650px'
                         }}>
                            Whether your time-saving automation needs are large or small, 
                            we're here to help you scale.
@@ -362,25 +361,25 @@ const Packages = () => {
                               </div>
                            )}
 
-                           <div className="td-package-header mb-35">
+                           <div className="td-package-header mb-25">
                               <h3 style={{ 
-                                 fontSize: '32px',
+                                 fontSize: '26px',
                                  fontWeight: '700',
                                  color: '#fff',
-                                 marginBottom: '15px',
+                                 marginBottom: '12px',
                                  lineHeight: '1.2'
                               }}>
                                  {pkg.name}
                               </h3>
-                              <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '10px' }}>
+                              <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginBottom: '8px' }}>
                                  <span style={{ 
-                                    fontSize: 'clamp(48px, 6vw, 64px)',
+                                    fontSize: 'clamp(42px, 5vw, 52px)',
                                     fontWeight: '800',
                                     color: '#91ed91',
                                     lineHeight: '1',
                                  }}>{pkg.price}</span>
                                  <span style={{ 
-                                    fontSize: '20px',
+                                    fontSize: '16px',
                                     color: 'rgba(255,255,255,0.6)',
                                     fontWeight: '500'
                                  }}>/in total</span>
@@ -389,19 +388,19 @@ const Packages = () => {
 
                            <div className="td-package-content">
                               {pkg.features.map((feature, idx) => (
-                                 <div key={idx} style={{ marginBottom: '30px' }}>
+                                 <div key={idx} style={{ marginBottom: '20px' }}>
                                     <h4 style={{
-                                       fontSize: '20px',
+                                       fontSize: '17px',
                                        fontWeight: '700',
                                        color: '#91ed91',
-                                       marginBottom: '20px',
+                                       marginBottom: '12px',
                                        display: 'flex',
                                        alignItems: 'center',
-                                       gap: '10px'
+                                       gap: '8px'
                                     }}>
                                        <span style={{
-                                          width: '6px',
-                                          height: '6px',
+                                          width: '5px',
+                                          height: '5px',
                                           borderRadius: '50%',
                                           background: '#91ed91',
                                           display: 'inline-block'
@@ -414,31 +413,31 @@ const Packages = () => {
                                        margin: 0,
                                        display: 'flex',
                                        flexDirection: 'column',
-                                       gap: '12px'
+                                       gap: '8px'
                                     }}>
                                        {feature.items.map((item, i) => (
                                           <li key={i} style={{
-                                             fontSize: '15px',
-                                             lineHeight: '1.6',
+                                             fontSize: '14px',
+                                             lineHeight: '1.5',
                                              color: 'rgba(255,255,255,0.8)',
-                                             paddingLeft: '25px',
+                                             paddingLeft: '20px',
                                              position: 'relative'
                                           }}>
                                              <span style={{
                                                 position: 'absolute',
                                                 left: '0',
-                                                top: '8px',
-                                                width: '16px',
-                                                height: '16px',
+                                                top: '6px',
+                                                width: '14px',
+                                                height: '14px',
                                                 borderRadius: '50%',
-                                                border: '2px solid #91ed91',
+                                                border: '1.5px solid #91ed91',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                              }}>
                                                 <span style={{
-                                                   width: '6px',
-                                                   height: '6px',
+                                                   width: '5px',
+                                                   height: '5px',
                                                    borderRadius: '50%',
                                                    background: '#91ed91',
                                                 }}></span>
@@ -451,19 +450,19 @@ const Packages = () => {
                               ))}
 
                               {pkg.shootingStrategy && (
-                                 <div style={{ marginBottom: '30px' }}>
+                                 <div style={{ marginBottom: '20px' }}>
                                     <h4 style={{
-                                       fontSize: '20px',
+                                       fontSize: '17px',
                                        fontWeight: '700',
                                        color: '#91ed91',
-                                       marginBottom: '20px',
+                                       marginBottom: '12px',
                                        display: 'flex',
                                        alignItems: 'center',
-                                       gap: '10px'
+                                       gap: '8px'
                                     }}>
                                        <span style={{
-                                          width: '6px',
-                                          height: '6px',
+                                          width: '5px',
+                                          height: '5px',
                                           borderRadius: '50%',
                                           background: '#91ed91',
                                           display: 'inline-block'
@@ -476,31 +475,31 @@ const Packages = () => {
                                        margin: 0,
                                        display: 'flex',
                                        flexDirection: 'column',
-                                       gap: '12px'
+                                       gap: '8px'
                                     }}>
                                        {pkg.shootingStrategy.items.map((item, i) => (
                                           <li key={i} style={{
-                                             fontSize: '15px',
-                                             lineHeight: '1.6',
+                                             fontSize: '14px',
+                                             lineHeight: '1.5',
                                              color: 'rgba(255,255,255,0.8)',
-                                             paddingLeft: '25px',
+                                             paddingLeft: '20px',
                                              position: 'relative'
                                           }}>
                                              <span style={{
                                                 position: 'absolute',
                                                 left: '0',
-                                                top: '8px',
-                                                width: '16px',
-                                                height: '16px',
+                                                top: '6px',
+                                                width: '14px',
+                                                height: '14px',
                                                 borderRadius: '50%',
-                                                border: '2px solid #91ed91',
+                                                border: '1.5px solid #91ed91',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
                                              }}>
                                                 <span style={{
-                                                   width: '6px',
-                                                   height: '6px',
+                                                   width: '5px',
+                                                   height: '5px',
                                                    borderRadius: '50%',
                                                    background: '#91ed91',
                                                 }}></span>
@@ -518,8 +517,8 @@ const Packages = () => {
                               style={{
                                  display: 'block',
                                  width: '100%',
-                                 padding: '18px 40px',
-                                 marginTop: '30px',
+                                 padding: '14px 32px',
+                                 marginTop: '20px',
                                  background: pkg.highlighted 
                                     ? 'linear-gradient(135deg, #91ed91 0%, #7FFF00 100%)'
                                     : 'rgba(255,255,255,0.05)',
@@ -562,19 +561,19 @@ const Packages = () => {
 
                {/* Additional Brand Strategy for Nabuchadnezzar */}
                {activeCategory === 'NABUCHADNEZZAR' && (
-                  <div className="row mt-60">
+                  <div className="row mt-50">
                      <div className="col-lg-12">
                         <div style={{
-                           padding: '60px',
+                           padding: '40px',
                            borderRadius: '24px',
                            background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
                            border: '1px solid rgba(145, 237, 145, 0.2)',
                         }}>
                            <h3 style={{
-                              fontSize: 'clamp(28px, 4vw, 42px)',
+                              fontSize: 'clamp(24px, 4vw, 32px)',
                               fontWeight: '700',
                               color: '#91ed91',
-                              marginBottom: '40px',
+                              marginBottom: '30px',
                               textAlign: 'center'
                            }}>
                               Complete Brand Strategy Included
@@ -582,12 +581,12 @@ const Packages = () => {
                            <div className="row g-4">
                               {brand_strategy_items.map((section, idx) => (
                                  <div key={idx} className="col-lg-6">
-                                    <div style={{ marginBottom: '30px' }}>
+                                    <div style={{ marginBottom: '20px' }}>
                                        <h4 style={{
-                                          fontSize: '20px',
+                                          fontSize: '17px',
                                           fontWeight: '700',
                                           color: '#fff',
-                                          marginBottom: '20px',
+                                          marginBottom: '15px',
                                        }}>
                                           {idx + 1}. {section.title}
                                        </h4>
@@ -598,20 +597,20 @@ const Packages = () => {
                                              margin: 0,
                                              display: 'flex',
                                              flexDirection: 'column',
-                                             gap: '10px'
+                                             gap: '8px'
                                           }}>
                                              {section.items.map((item, i) => (
                                                 <li key={i} style={{
-                                                   fontSize: '15px',
-                                                   lineHeight: '1.6',
+                                                   fontSize: '14px',
+                                                   lineHeight: '1.5',
                                                    color: 'rgba(255,255,255,0.7)',
-                                                   paddingLeft: '25px',
+                                                   paddingLeft: '20px',
                                                    position: 'relative'
                                                 }}>
                                                    <span style={{
                                                       position: 'absolute',
                                                       left: '0',
-                                                      top: '8px',
+                                                      top: '7px',
                                                       width: '4px',
                                                       height: '4px',
                                                       borderRadius: '50%',
@@ -634,16 +633,16 @@ const Packages = () => {
          </div>
 
          {/* The Neo Approach Section */}
-         <div className="td-approach-area pt-170 pb-160" style={{ 
+         <div className="td-approach-area pt-100 pb-80" style={{ 
             background: 'linear-gradient(180deg, rgba(10, 30, 21, 1) 0%, rgba(15, 40, 28, 1) 100%)',
             position: 'relative',
          }}>
             <div className="container">
-               <div className="row mb-70">
+               <div className="row mb-40">
                   <div className="col-lg-12">
                      <div className="text-center">
-                        <h2 className="td-section-4-title mb-30" style={{ 
-                           fontSize: 'clamp(40px, 5vw, 72px)',
+                        <h2 className="td-section-4-title mb-20" style={{ 
+                           fontSize: 'clamp(36px, 5vw, 58px)',
                            lineHeight: '1.15',
                            color: '#fff',
                            fontWeight: '700',
@@ -658,20 +657,21 @@ const Packages = () => {
                         </h2>
                         
                         <p className="td-section-4-text mx-auto" style={{ 
-                           fontSize: '20px',
-                           lineHeight: '1.8',
+                           fontSize: '17px',
+                           lineHeight: '1.6',
                            color: 'rgba(255, 255, 255, 0.8)',
-                           maxWidth: '800px',
-                           fontStyle: 'italic'
+                           maxWidth: '750px',
+                           fontStyle: 'italic',
+                           marginBottom: '10px'
                         }}>
                            Selling to the Subconscious Mind
                         </p>
 
-                        <p className="td-section-4-text mx-auto mb-60" style={{ 
-                           fontSize: '18px',
-                           lineHeight: '1.8',
+                        <p className="td-section-4-text mx-auto mb-35" style={{ 
+                           fontSize: '15px',
+                           lineHeight: '1.6',
                            color: 'rgba(255, 255, 255, 0.7)',
-                           maxWidth: '900px'
+                           maxWidth: '800px'
                         }}>
                            Our strategies are built on scientific marketing psychology to ensure 
                            brand messages are deeply ingrained in the consumer's mind
@@ -741,15 +741,15 @@ const Packages = () => {
                   ].map((approach, idx) => (
                      <div key={idx} className="col-lg-4 col-md-6">
                         <div className="td-approach-card" style={{
-                           padding: '40px',
-                           borderRadius: '20px',
+                           padding: '30px',
+                           borderRadius: '18px',
                            background: 'linear-gradient(135deg, rgba(145, 237, 145, 0.08) 0%, rgba(127, 255, 0, 0.03) 100%)',
                            border: '1px solid rgba(145, 237, 145, 0.2)',
                            transition: 'all 0.4s ease',
                            height: '100%',
                         }}
                            onMouseEnter={(e) => {
-                              e.currentTarget.style.transform = 'translateY(-10px)';
+                              e.currentTarget.style.transform = 'translateY(-8px)';
                               e.currentTarget.style.borderColor = 'rgba(145, 237, 145, 0.4)';
                               e.currentTarget.style.boxShadow = '0 20px 60px rgba(145, 237, 145, 0.15)';
                            }}
@@ -760,30 +760,30 @@ const Packages = () => {
                            }}
                         >
                            <div style={{
-                              width: '70px',
-                              height: '70px',
-                              borderRadius: '16px',
+                              width: '60px',
+                              height: '60px',
+                              borderRadius: '14px',
                               background: 'linear-gradient(135deg, rgba(145, 237, 145, 0.15) 0%, rgba(127, 255, 0, 0.1) 100%)',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              marginBottom: '25px',
+                              marginBottom: '20px',
                               color: '#91ed91',
                            }}>
                               {approach.icon}
                            </div>
                            <h3 style={{
-                              fontSize: '24px',
+                              fontSize: '20px',
                               fontWeight: '700',
                               color: '#fff',
-                              marginBottom: '15px',
+                              marginBottom: '12px',
                               lineHeight: '1.3'
                            }}>
                               {approach.title}
                            </h3>
                            <p style={{
-                              fontSize: '16px',
-                              lineHeight: '1.7',
+                              fontSize: '15px',
+                              lineHeight: '1.6',
                               color: 'rgba(255,255,255,0.7)',
                               margin: 0
                            }}>

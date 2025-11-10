@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import LazyImage from "../../common/LazyImage"
 
 interface ProductionType {
    id: number;
@@ -129,7 +130,7 @@ const ProductionWorks = () => {
                            overflow: 'hidden',
                            position: 'relative'
                         }}>
-                           <img 
+                           <LazyImage
                               className="w-100" 
                               src={item.thumb} 
                               alt={item.title} 
@@ -139,8 +140,6 @@ const ProductionWorks = () => {
                                  objectFit: 'cover',
                                  transition: 'transform 0.4s ease'
                               }} 
-                              onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
-                              onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
                            />
                            <div style={{
                               position: 'absolute',

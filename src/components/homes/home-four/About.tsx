@@ -1,4 +1,5 @@
  import { Link } from "react-router-dom"
+import LazyImage from "../../common/LazyImage"
 
 const About = () => {
    return (
@@ -7,7 +8,7 @@ const About = () => {
             <div className="row">
                <div className="col-lg-4">
                   <div className="td-about-4-thumb mb-30 wow fadeInLeft fix td-rounded-10" data-wow-delay=".5s" data-wow-duration="1s">
-                     <img data-speed=".9" className="w-100" src="/Neo-studio_2.png" alt="Neo Marketing Studio" style={{ objectFit: 'cover', borderRadius: '10px' }} />
+                     <LazyImage src="/Neo-studio_2.png" alt="Neo Marketing Studio" className="w-100" style={{ objectFit: 'cover', borderRadius: '10px' }} />
                   </div>
                </div>
                <div className="col-lg-8">
@@ -38,7 +39,7 @@ const About = () => {
                         </span>
                      </Link>
                      <div className="text-end mt-10 fix td-rounded-10">
-                        <img data-speed=".9" src="/Neo-Hero-image.png" alt="Neo Marketing Office" style={{ borderRadius: '10px', objectFit: 'cover', width: '100%' }} />
+                        <LazyImage src="/Neo-Hero-image.png" alt="Neo Marketing Office" style={{ borderRadius: '10px', objectFit: 'cover', width: '100%' }} />
                      </div>
                   </div>
                </div>

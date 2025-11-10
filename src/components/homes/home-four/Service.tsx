@@ -76,11 +76,11 @@ const formatSerial = (num: number): string => {
 
 const Service = () => {
    return (
-      <div className="td-service-area pt-170 pb-160">
+      <div className="td-service-area pt-120 pb-100">
          <div className="container">
-            <div className="row align-items-center mb-70">
+            <div className="row align-items-center mb-50">
                <div className="col-lg-12">
-                  <div className="td-service-title-wrap-modern text-center mb-60">
+                  <div className="td-service-title-wrap-modern text-center mb-40">
                      <div className="td-service-badge mb-25" style={{
                         display: 'inline-flex',
                         alignItems: 'center',
@@ -101,15 +101,14 @@ const Service = () => {
                         Our Services
                      </div>
                      
-                     <h2 className="td-section-4-title fw-700 mb-30" style={{
-                        fontSize: 'clamp(40px, 5vw, 72px)',
+                     <h2 className="td-section-4-title fw-700 mb-20" style={{
+                        fontSize: 'clamp(36px, 5vw, 58px)',
                         lineHeight: '1.15',
                         color: '#fff',
                         letterSpacing: '-1px',
                      }}>
                         <SplitTextWrapper direction="right">
-                           FULL-HOUSE MARKETING<br />
-                           <span style={{
+                           FULL-HOUSE MARKETING <span style={{
                               background: 'linear-gradient(135deg, #7FFF00 0%, #00FF7F 100%)',
                               WebkitBackgroundClip: 'text',
                               WebkitTextFillColor: 'transparent',
@@ -118,10 +117,10 @@ const Service = () => {
                         </SplitTextWrapper>
                      </h2>
                      
-                     <div className="td-service-description mx-auto" style={{ maxWidth: '800px' }}>
+                     <div className="td-service-description mx-auto" style={{ maxWidth: '750px' }}>
                         <p style={{ 
-                           fontSize: '20px', 
-                           lineHeight: '1.8',
+                           fontSize: '17px', 
+                           lineHeight: '1.6',
                            color: 'rgba(255,255,255,0.8)',
                            fontWeight: '400',
                            marginBottom: '0'
@@ -142,7 +141,7 @@ const Service = () => {
                         backdropFilter: 'blur(10px)',
                         border: '1px solid rgba(255,255,255,0.1)',
                         borderRadius: '24px',
-                        padding: '40px',
+                        padding: '30px',
                         transition: 'all 0.4s ease',
                         overflow: 'hidden',
                      }}>
@@ -159,14 +158,14 @@ const Service = () => {
                            <img src={item.thumb} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                         
-                        <div className="td-service-4-header mb-25 d-flex align-items-center justify-content-between">
+                        <div className="td-service-4-header mb-20 d-flex align-items-center justify-content-between">
                            <div className="td-service-4-icon-modern" style={{
-                              width: '70px',
-                              height: '70px',
+                              width: '60px',
+                              height: '60px',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              borderRadius: '16px',
+                              borderRadius: '14px',
                               background: 'linear-gradient(135deg, #7FFF00 0%, #00FF7F 100%)',
                               color: '#000',
                               transition: 'all 0.4s ease',
@@ -174,15 +173,15 @@ const Service = () => {
                               {item.icon}
                            </div>
                            <span className="td-service-4-number" style={{
-                              fontSize: '72px',
+                              fontSize: '60px',
                               fontWeight: '800',
                               color: 'rgba(127, 255, 0, 0.1)',
                               lineHeight: '1',
                            }}>{formatSerial(i + 1)}</span>
                         </div>
                         
-                        <h3 className="td-service-4-title-modern mb-20" style={{
-                           fontSize: '28px',
+                        <h3 className="td-service-4-title-modern mb-15" style={{
+                           fontSize: '24px',
                            fontWeight: '700',
                            lineHeight: '1.3',
                            color: '#fff',
@@ -192,15 +191,15 @@ const Service = () => {
                            </Link>
                         </h3>
                         
-                        <p className="td-service-4-desc mb-25" style={{
-                           fontSize: '16px',
+                        <p className="td-service-4-desc mb-20" style={{
+                           fontSize: '15px',
                            lineHeight: '1.6',
                            color: 'rgba(255,255,255,0.7)',
                         }}>
                            {item.desc}
                         </p>
                         
-                        <div className="td-service-4-features mb-30">
+                        <div className="td-service-4-features mb-20">
                            <ul style={{ 
                               listStyle: 'none', 
                               padding: 0, 
@@ -277,11 +276,11 @@ const Service = () => {
             
             @media (max-width: 991px) {
                .td-service-4-item-modern {
-                  padding: 30px !important;
+                  padding: 25px !important;
                }
                
                .td-service-4-title-modern {
-                  font-size: 24px !important;
+                  font-size: 22px !important;
                }
             }
          `}</style>

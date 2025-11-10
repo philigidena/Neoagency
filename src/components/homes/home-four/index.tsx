@@ -1,17 +1,32 @@
-import About from "./About"
-import Blog from "./Blog"
-import Counter from "./Counter"
+import { lazy, Suspense } from "react"
 import Hero from "./Hero"
-import Portfolio from "./Portfolio"
-import Service from "./Service"
-import Team from "./Team"
-import VideoArea from "./VideoArea"
-import Faq from "./Faq"
-import ProductionWorks from "./ProductionWorks"
-import Packages from "./Packages"
+import Counter from "./Counter"
+import About from "./About"
 import HeaderFour from "../../../layouts/headers/HeaderFour"
 import FooterFour from "../../../layouts/footers/FooterFour"
 import MatrixRainPattern from "../../common/MatrixRainPattern"
+
+// Lazy load below-the-fold sections for better initial load
+const Portfolio = lazy(() => import("./Portfolio"))
+const Service = lazy(() => import("./Service"))
+const Packages = lazy(() => import("./Packages"))
+const VideoArea = lazy(() => import("./VideoArea"))
+const ProductionWorks = lazy(() => import("./ProductionWorks"))
+const Team = lazy(() => import("./Team"))
+const Faq = lazy(() => import("./Faq"))
+const Blog = lazy(() => import("./Blog"))
+
+const SectionLoader = () => (
+   <div style={{ 
+      minHeight: '200px', 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center',
+      color: 'rgba(145, 237, 145, 0.5)'
+   }}>
+      Loading...
+   </div>
+)
 
 const HomeFour = () => {
    return (
@@ -30,14 +45,30 @@ const HomeFour = () => {
                   <Hero />
                   <Counter />
                   <About />
-                  <Portfolio />
-                  <Service />
-                  <Packages />
-                  <VideoArea />
-                  <ProductionWorks />
-                  <Team />
-                  <Faq />
-                  <Blog />
+                  <Suspense fallback={<SectionLoader />}>
+                     <Portfolio />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <Service />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <Packages />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <VideoArea />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <ProductionWorks />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <Team />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <Faq />
+                  </Suspense>
+                  <Suspense fallback={<SectionLoader />}>
+                     <Blog />
+                  </Suspense>
                </main>
                <FooterFour />
             </div>
