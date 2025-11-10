@@ -19,9 +19,9 @@ const Team = () => {
          <div id="smooth-wrapper">
             <div id="smooth-content">
                <main>
-                  <BreadcrumbTwo sub_title="MEET THE FOUNDERS"
-                     title={<>The Visionaries <br /> <span>Behind Neo</span></>}
-                     desc="Born from Dopamine Studios, our founders bring years of production expertise and strategic marketing vision. Together, they lead Neo in redefining what marketing agencies can achieve."
+                  <BreadcrumbTwo sub_title="MEET THE TEAM"
+                     title={<>Meet the <span>Team</span></>}
+                     desc="Born from Dopamine Studios, our team brings years of production expertise and strategic marketing vision. Together, we lead Neo in redefining what marketing agencies can achieve."
                   />
                   <TeamArea />
                   <Brand />

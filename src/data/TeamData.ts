@@ -25,6 +25,14 @@ const team_data: DataType[] = [
       designation: "Lead, Business Development, Strategy & Client Management",
       description: "An Executive Producer of major TV shows, Philimon brings experience from top local and international channels. He leads business development and client relations with vision and creative strength."
    },
+   {
+      id: 3,
+      page: "home_4",
+      thumb: "/Kirubel.jpg",
+      name: "KIRUBEL GIRMA",
+      designation: "Manager of the Marketing Department",
+      description: "Kirubel leads the marketing department with strategic vision and creative excellence, ensuring all campaigns deliver measurable results and brand growth."
+   },
 
    // home_5
    {

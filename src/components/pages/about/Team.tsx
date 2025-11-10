@@ -17,7 +17,12 @@ const Team = () => {
                   <div key={item.id} className="col-lg-3 col-md-6 col-sm-6">
                      <div className="td-team-4-wrap p-relative mb-30">
                         <div className="td-team-4-thumb" style={{ height: '400px', overflow: 'hidden' }}>
-                           <img className="w-100" src={item.thumb} alt="" style={{ height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
+                           <img className="w-100" src={item.thumb} alt="" style={{ 
+                              height: item.name === 'KIRUBEL GIRMA' ? '110%' : '100%', 
+                              objectFit: 'cover', 
+                              objectPosition: item.name === 'KIRUBEL GIRMA' ? 'center 15%' : 'center top',
+                              transform: item.name === 'KIRUBEL GIRMA' ? 'scale(0.9)' : 'none'
+                           }} />
                         </div>
                         <div className="td-team-4-content text-center">
                            <span className="td-team-4-subtitle">{item.designation}</span>
