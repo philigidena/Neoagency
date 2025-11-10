@@ -21,7 +21,7 @@ const Service = () => {
             <div id="smooth-content">
                <main>
                   <BreadcrumbTwo sub_title="FULL-HOUSE MARKETING"
-                     title={<>Neo's  <br /> <span>Services</span></>}
+                     title={<>Neo's <span style={{ color: '#91ed91' }}>Services</span></>}
                      desc="Neo is a full-house marketing agency offering end-to-end solutions through a wide range of specialized services. From strategy to execution, we bring your brand vision to life."
                   />
                   <ServiceArea />

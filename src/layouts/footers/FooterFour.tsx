@@ -4,7 +4,7 @@ import SplitTextWrapper from "../../components/common/SplitTextWrapper"
 const FooterFour = () => {
    return (
       <footer>
-         <div className="td-footer-area td-btn-trigger">
+         <div className="td-footer-area td-btn-trigger" style={{ marginTop: '120px' }}>
             <div className="container">
                <div className="row">
                   <div className="col-12">
