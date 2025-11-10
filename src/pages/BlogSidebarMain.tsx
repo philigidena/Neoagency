@@ -5,7 +5,7 @@ import Wrapper from "../layouts/Wrapper"
 const BlogSidebarMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'BlogSidebar'} />
+         <SEO pageTitle={'Blog | Neo Marketing'} />
          <BlogSidebar />
       </Wrapper>
    )

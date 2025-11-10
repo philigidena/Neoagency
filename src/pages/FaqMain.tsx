@@ -5,7 +5,7 @@ import Wrapper from "../layouts/Wrapper"
 const FaqMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'Faq'} />
+         <SEO pageTitle={'FAQ | Neo Marketing'} />
          <Faq />
       </Wrapper>
    )

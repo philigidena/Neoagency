@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import LoadingSpinner from '../components/common/LoadingSpinner';
+import ScrollToTopOnMount from '../components/common/ScrollToTopOnMount';
 
 // Lazy load all pages except home for better initial load
 const HomeFourMain = lazy(() => import('../pages/HomeFourMain'));
@@ -20,6 +21,7 @@ const ErrorMain = lazy(() => import('../pages/ErrorMain'));
 const AppNavigation = () => {
    return (
       <Router>
+         <ScrollToTopOnMount />
          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
                <Route path="/" element={<HomeFourMain />} />

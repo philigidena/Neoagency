@@ -5,7 +5,7 @@ import Wrapper from "../layouts/Wrapper"
 const PortfolioOneMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'Portfolio One'} />
+         <SEO pageTitle={'Portfolio | Neo Marketing'} />
          <PortfolioOne />
       </Wrapper>
    )

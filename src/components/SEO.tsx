@@ -6,7 +6,7 @@ type SEOProps = {
 
 const SEO = ({ pageTitle }: SEOProps) => {
    useEffect(() => {
-      document.title = `${pageTitle} - Parody - Digital Agency Portfolio React js Template`;
+      document.title = pageTitle;
    }, [pageTitle]);
 
    return null;

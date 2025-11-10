@@ -5,7 +5,7 @@ import Wrapper from "../layouts/Wrapper"
 const ErrorMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'404 ||'} />
+         <SEO pageTitle={'404 - Page Not Found | Neo Marketing'} />
          <ErrorArea />
       </Wrapper>
    )

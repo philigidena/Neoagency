@@ -5,7 +5,7 @@ import About from '../components/pages/about';
 const AboutMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'About'} />
+         <SEO pageTitle={'About Us | Neo Marketing'} />
          <About />
       </Wrapper>
    );

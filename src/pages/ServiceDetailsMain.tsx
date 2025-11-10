@@ -5,7 +5,7 @@ import Wrapper from "../layouts/Wrapper"
 const ServiceDetailsMain = () => {
    return (
       <Wrapper>
-         <SEO pageTitle={'Service Details'} />
+         <SEO pageTitle={'Service Details | Neo Marketing'} />
          <ServiceDetails />
       </Wrapper>
    )
