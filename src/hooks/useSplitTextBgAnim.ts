@@ -7,7 +7,9 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const useSplitTextBgAnim = () => {
    useLayoutEffect(() => {
-      const ctx = gsap.context(() => {
+      // Add a small delay to ensure lazy-loaded content is rendered
+      const initTimer = setTimeout(() => {
+         const ctx = gsap.context(() => {
          const elements = document.querySelectorAll(".td-text-invert, .td-text-opacity");
          if (!elements.length) return;
 
@@ -29,7 +31,10 @@ const useSplitTextBgAnim = () => {
          });
       });
 
-      return () => ctx.revert();
+         return () => ctx.revert();
+      }, 200);
+
+      return () => clearTimeout(initTimer);
    }, []);
 };
 
