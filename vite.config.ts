@@ -31,10 +31,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'gsap'],
   },
-  // Support client-side routing during preview
-  preview: {
-    port: 4173,
-    strictPort: false,
-    open: true,
-  },
 })
