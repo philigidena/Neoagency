@@ -146,7 +146,6 @@ const Portfolio = () => {
 
    return (
       <div className="td-portfolio-area" style={{ 
-         background: 'linear-gradient(180deg, #0a1e15 0%, #0f2419 100%)',
          padding: '120px 0',
          position: 'relative',
          overflow: 'hidden'

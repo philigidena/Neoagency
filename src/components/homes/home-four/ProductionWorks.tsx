@@ -46,7 +46,6 @@ const partner_logos: string[] = [
 const ProductionWorks = () => {
    return (
       <div className="td-portfolio-area pt-170 pb-160" style={{ 
-         background: 'linear-gradient(180deg, rgba(10, 30, 21, 1) 0%, rgba(15, 40, 28, 1) 100%)',
          position: 'relative',
       }}>
          <div className="container">
