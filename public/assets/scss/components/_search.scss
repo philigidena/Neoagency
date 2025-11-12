@@ -12,8 +12,9 @@
         left: 0;
         right: 0;
         width: 100%;
-        background: var(--td-common-white);
+        background: rgba(15, 40, 28, 0.98);
         backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(145, 237, 145, 0.2);
         z-index: 99999999;
         -webkit-transform: translateY(calc(-100% - 80px));
         -moz-transform: translateY(calc(-100% - 80px));

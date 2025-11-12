@@ -47,19 +47,19 @@ const cat_data: DataType[] = [
 const rc_data: RcData[] = [
    {
       id: 1,
-      img: "/assets/img/blog/sidebar/right/thumb.jpg",
+      img: "/Neo-studio_2.png",
       title: "The Art of Visual Storytelling in Marketing",
       boder: true,
    },
    {
       id: 2,
-      img: "/assets/img/blog/sidebar/right/thumb-2.jpg",
+      img: "/Neo-studio_9.png",
       title: "Building Authentic Brand Connections",
       boder: true,
    },
    {
       id: 3,
-      img: "/assets/img/blog/sidebar/right/thumb-4.jpg",
+      img: "/Neo-studio_11.png",
       title: "Data-Driven Creative Campaigns",
    },
 ];

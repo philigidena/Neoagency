@@ -696,9 +696,9 @@
                 }
                 & a {
                     @media #{$md,$sm,$xs} {
-                        color: var(--td-common-black);
-                        background: var(--td-common-white);
-                        border-color: var(--td-common-white);
+                        color: var(--td-common-white);
+                        background: rgba(15, 40, 28, 0.95);
+                        border-color: rgba(145, 237, 145, 0.3);
                     }
                     &:hover{
                         background: var(--td-theme-4);

@@ -43,7 +43,8 @@
     }
     &-3{
         &-item{
-            background: var(--td-common-white);
+            background: rgba(15, 40, 28, 0.95);
+            border: 1px solid rgba(145, 237, 145, 0.2);
             border-radius: 10px;
             padding: 30px 60px 44px 40px;
             & .title{

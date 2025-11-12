@@ -146,9 +146,10 @@
 		font-weight: 600;
 		font-size: 18px;
 		text-align: center;
-		color: var(--td-common-black-4);
+		color: var(--td-common-white);
 		border-radius: 100%;
-		background: var(--td-common-white);
+		background: rgba(15, 40, 28, 0.95);
+		border: 2px solid rgba(145, 237, 145, 0.3);
 		width: 170px;
 		height: 170px;
 		display: inline-block;
@@ -159,11 +160,12 @@
 			background: transparent;
 		}
 		&-border{
-			border-color: rgba(45, 45, 45, 0.2);
+			border-color: rgba(145, 237, 145, 0.3);
 			background: transparent;
 			&:hover{
-				background: var(--td-common-white);
-				border-color: var(--td-common-white);
+				background: rgba(145, 237, 145, 0.2);
+				border-color: #91ed91;
+				color: #91ed91;
 			}
 		}
 	}
@@ -171,8 +173,9 @@
 		font-weight: 600;
 		font-size: 17px;
 		display: inline-block;
-		color: var(--td-common-black-5);
-		background: var(--td-common-white);
+		color: var(--td-common-white);
+		background: rgba(15, 40, 28, 0.95);
+		border: 1px solid rgba(145, 237, 145, 0.3);
 		padding: 15px 34px;
 		border-radius: 30px;
 		&:hover{
