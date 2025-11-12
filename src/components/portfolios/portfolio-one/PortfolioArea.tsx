@@ -1,15 +1,41 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Isotope from "isotope-layout";
 import portfolio_data from "../../../data/PortfolioData";
-import VideoPopup from "../../../modals/VideoPopup";
 
 const PortfolioArea = () => {
 
    const isotope = useRef<Isotope | null>(null);
    const [filterKey, setFilterKey] = useState("*");
    const [selectedFilter, setSelectedFilter] = useState("*");
-   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
-   const [videoId, setVideoId] = useState<string>("");
+   const [visibleVideos, setVisibleVideos] = useState<Set<number>>(new Set());
+
+   // Intersection Observer for lazy loading videos
+   useEffect(() => {
+      const observer = new IntersectionObserver(
+         (entries) => {
+            entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                  const videoId = entry.target.getAttribute('data-video-id');
+                  if (videoId) {
+                     setVisibleVideos(prev => new Set(prev).add(parseInt(videoId)));
+                  }
+               }
+            });
+         },
+         {
+            rootMargin: '50px',
+            threshold: 0.1
+         }
+      );
+
+      // Observe all video containers
+      const videoContainers = document.querySelectorAll('[data-video-id]');
+      videoContainers.forEach(container => observer.observe(container));
+
+      return () => {
+         videoContainers.forEach(container => observer.unobserve(container));
+      };
+   }, [filterKey]);
 
    useEffect(() => {
       // Add delay to ensure lazy-loaded content is rendered
@@ -89,90 +115,175 @@ const PortfolioArea = () => {
             </div>
             <div className="grid row">
                {filteredData.map((item) => (
-                  <div key={item.id} className={`col-md-6 grid-item ${item.category} mb-30`}>
+                  <div key={item.id} className={`col-lg-4 col-md-6 grid-item ${item.category} mb-30`}>
                      <div 
-                        className="td-portfolio-filter-wrapper p-relative" 
-                        style={{ cursor: 'pointer', overflow: 'hidden', borderRadius: '12px' }}
-                        onClick={() => {
-                           if (item.videoUrl) {
-                              setVideoId(item.videoUrl);
-                              setIsVideoOpen(true);
-                           }
+                        className="td-portfolio-video-card"
+                        data-video-id={item.id}
+                        style={{ 
+                           overflow: 'hidden', 
+                           borderRadius: '16px',
+                           background: '#000',
+                           boxShadow: '0 10px 40px rgba(0,0,0,0.2)',
+                           transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => {
+                           e.currentTarget.style.transform = 'translateY(-5px)';
+                           e.currentTarget.style.boxShadow = '0 15px 50px rgba(145, 237, 145, 0.2)';
+                        }}
+                        onMouseLeave={(e) => {
+                           e.currentTarget.style.transform = 'translateY(0)';
+                           e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.2)';
                         }}
                      >
-                        <div className="td-portfolio-filter-thumb fix" style={{ position: 'relative' }}>
-                           <img className="w-100" src={item.img} alt={item.title} style={{ transition: 'transform 0.3s ease' }} />
-                           {/* Video Play Overlay */}
-                           <div style={{
-                              position: 'absolute',
-                              top: '50%',
-                              left: '50%',
-                              transform: 'translate(-50%, -50%)',
-                              width: '70px',
-                              height: '70px',
-                              borderRadius: '50%',
-                              background: 'rgba(145, 237, 145, 0.95)',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              transition: 'all 0.3s ease',
-                              boxShadow: '0 8px 25px rgba(145, 237, 145, 0.4)'
-                           }}
-                           className="video-play-btn"
-                           >
-                              <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M22.5 11.7679C24.1667 12.7377 24.1667 15.2623 22.5 16.2321L3 27.1244C1.33333 28.0942 -0.666667 26.8819 -0.666667 24.9423L-0.666666 3.05769C-0.666666 1.11808 1.33334 -0.0941819 3 0.875644L22.5 11.7679Z" fill="#0a1e15"/>
-                              </svg>
-                           </div>
-                           {/* Gradient Overlay */}
-                           <div style={{
-                              position: 'absolute',
-                              bottom: 0,
-                              left: 0,
-                              right: 0,
-                              height: '60%',
-                              background: 'linear-gradient(to top, rgba(10, 30, 21, 0.9) 0%, rgba(10, 30, 21, 0) 100%)',
-                              pointerEvents: 'none'
-                           }}></div>
-                        </div>
-                        <div className="td-portfolio-filter-content">
-                           <span className="mb-10">{item.tag}</span>
-                           <h3 className="titles">{item.title}</h3>
-                           {item.description && (
-                              <p style={{ 
-                                 fontSize: '14px',
-                                 marginTop: '8px',
-                                 lineHeight: '1.5'
-                              }}>
-                                 {item.description}
-                              </p>
+                        <div style={{ 
+                           position: 'relative',
+                           width: '100%',
+                           height: '550px',
+                           overflow: 'hidden',
+                           background: '#000'
+                        }}>
+                           {item.videoUrl && item.videoType === 'vimeo' ? (
+                              <>
+                                 {visibleVideos.has(item.id) ? (
+                                    <iframe
+                                       id={`vimeo-player-${item.id}`}
+                                       src={`https://player.vimeo.com/video/${item.videoUrl}?autoplay=1&loop=1&autopause=0&muted=1&byline=0&title=0&portrait=0&controls=1&background=0&quality=360p`}
+                                       frameBorder="0"
+                                       allow="autoplay; fullscreen; picture-in-picture"
+                                       loading="lazy"
+                                       style={{
+                                          position: 'absolute',
+                                          top: '50%',
+                                          left: '50%',
+                                          width: '177.78%',
+                                          height: '177.78%',
+                                          minWidth: '177.78%',
+                                          minHeight: '177.78%',
+                                          transform: 'translate(-50%, -50%)',
+                                          pointerEvents: 'auto',
+                                          border: 'none'
+                                       }}
+                                       title={item.title}
+                                    ></iframe>
+                                 ) : (
+                                    <div style={{
+                                       width: '100%',
+                                       height: '100%',
+                                       background: '#000',
+                                       display: 'flex',
+                                       alignItems: 'center',
+                                       justifyContent: 'center'
+                                    }}>
+                                       <div style={{
+                                          color: '#91ed91',
+                                          fontSize: '14px',
+                                          fontWeight: '500'
+                                       }}>Loading...</div>
+                                    </div>
+                                 )}
+                                 {/* Play/Sound button overlay - only show when video is loaded */}
+                                 {visibleVideos.has(item.id) && (
+                                    <div 
+                                       onClick={() => {
+                                          const iframe = document.getElementById(`vimeo-player-${item.id}`) as HTMLIFrameElement;
+                                          if (iframe && (window as any).Vimeo) {
+                                             try {
+                                                const player = new (window as any).Vimeo.Player(iframe);
+                                                player.getMuted().then((muted: boolean) => {
+                                                   player.setMuted(!muted);
+                                                }).catch((error: any) => {
+                                                   console.log('Unmute error:', error);
+                                                });
+                                             } catch (error) {
+                                                console.log('Player error:', error);
+                                             }
+                                          }
+                                       }}
+                                       style={{
+                                          position: 'absolute',
+                                          bottom: '20px',
+                                          right: '20px',
+                                          width: '48px',
+                                          height: '48px',
+                                          borderRadius: '50%',
+                                          background: 'rgba(145, 237, 145, 0.95)',
+                                          display: 'flex',
+                                          alignItems: 'center',
+                                          justifyContent: 'center',
+                                          cursor: 'pointer',
+                                          zIndex: 2,
+                                          boxShadow: '0 4px 12px rgba(145, 237, 145, 0.4)',
+                                          transition: 'all 0.3s ease',
+                                          backdropFilter: 'blur(10px)'
+                                       }}
+                                       onMouseEnter={(e) => {
+                                          e.currentTarget.style.transform = 'scale(1.1)';
+                                          e.currentTarget.style.boxShadow = '0 6px 20px rgba(145, 237, 145, 0.6)';
+                                       }}
+                                       onMouseLeave={(e) => {
+                                          e.currentTarget.style.transform = 'scale(1)';
+                                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(145, 237, 145, 0.4)';
+                                       }}
+                                    >
+                                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="#0a1e15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#0a1e15"/>
+                                          <path d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53" stroke="#0a1e15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                       </svg>
+                                    </div>
+                                 )}
+                              </>
+                           ) : (
+                              <img src={item.img} alt={item.title} style={{ 
+                                 width: '100%',
+                                 height: '100%',
+                                 objectFit: 'cover'
+                              }} />
                            )}
+                        </div>
+                        <div style={{ 
+                           padding: '24px',
+                           background: '#fff',
+                           borderTop: '1px solid rgba(145, 237, 145, 0.3)'
+                        }}>
+                           <span style={{
+                              fontSize: '10px',
+                              fontWeight: '700',
+                              color: '#91ed91',
+                              letterSpacing: '2px',
+                              textTransform: 'uppercase',
+                              display: 'block',
+                              marginBottom: '10px'
+                           }}>{item.tag}</span>
+                           <h3 style={{ 
+                              fontSize: '19px',
+                              fontWeight: '700',
+                              color: '#1C1D1F',
+                              marginBottom: '0',
+                              lineHeight: '1.3',
+                              letterSpacing: '-0.5px'
+                           }}>{item.title}</h3>
+                           <p style={{
+                              fontSize: '11px',
+                              color: 'rgba(28, 29, 31, 0.6)',
+                              marginTop: '8px',
+                              marginBottom: '0',
+                              fontWeight: '500',
+                              letterSpacing: '0.5px'
+                           }}>Click to unmute</p>
                         </div>
                      </div>
                   </div>
                ))}
             </div>
          </div>
-         <VideoPopup
-            isVideoOpen={isVideoOpen}
-            setIsVideoOpen={setIsVideoOpen}
-            videoId={videoId}
-         />
 
          {/* Custom Styles */}
          <style>{`
-            .td-portfolio-filter-wrapper:hover .td-portfolio-filter-thumb img {
-               transform: scale(1.05);
-            }
-            .td-portfolio-filter-wrapper:hover .video-play-btn {
-               transform: translate(-50%, -50%) scale(1.1);
-               box-shadow: 0 12px 35px rgba(145, 237, 145, 0.6);
-            }
             .td-portfolio-filter-btn button {
                margin: 0 8px;
                padding: 12px 24px;
                background: transparent;
-               border: 2px solid rgba(44, 110, 73, 0.3);
+               border: 2px solid rgba(28, 29, 31, 0.2);
                color: #1C1D1F;
                font-weight: 600;
                font-size: 13px;
@@ -182,13 +293,37 @@ const PortfolioArea = () => {
             }
             .td-portfolio-filter-btn button:hover {
                background: rgba(145, 237, 145, 0.1);
-               border-color: #2c6e49;
+               border-color: #91ed91;
                color: #1C1D1F;
             }
             .td-portfolio-filter-btn button.active {
                background: linear-gradient(135deg, #91ed91 0%, #7FFF00 100%);
                border-color: #91ed91;
                color: #0a1e15;
+            }
+            
+            /* Polish video cards */
+            .td-portfolio-video-card {
+               position: relative;
+            }
+            
+            .td-portfolio-video-card::before {
+               content: '';
+               position: absolute;
+               inset: 0;
+               border-radius: 16px;
+               padding: 1px;
+               background: linear-gradient(135deg, rgba(145, 237, 145, 0.1) 0%, rgba(127, 255, 0, 0.05) 100%);
+               -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+               -webkit-mask-composite: xor;
+               mask-composite: exclude;
+               pointer-events: none;
+               opacity: 0;
+               transition: opacity 0.3s ease;
+            }
+            
+            .td-portfolio-video-card:hover::before {
+               opacity: 1;
             }
          `}</style>
       </div>
