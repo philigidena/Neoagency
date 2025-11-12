@@ -18,7 +18,7 @@ const InnerHeader = () => {
                   <div className="row align-items-center">
                      <div className="col-xxl-2 col-xl-2 col-4">
                         <div className="logo">
-                           <Link className="logo-1" to="/"><img data-width="96" src="/assets/img/logo/logo-black.png" alt="Logo" /></Link>
+                           <Link className="logo-1" to="/"><img src="/neo-logo.png" alt="Neo Marketing Logo" style={{ height: '50px', width: 'auto' }} /></Link>
                         </div>
                      </div>
                      <div className="col-xxl-8 col-xl-7 d-none d-xl-block">

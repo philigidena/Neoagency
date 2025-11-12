@@ -6,6 +6,10 @@ interface DataType {
    title: string;
    tag: string;
    category: string;
+   videoUrl?: string; // Vimeo, YouTube, or direct video URL
+   videoType?: 'vimeo' | 'youtube' | 'direct'; // Type of video
+   description?: string;
+   client?: string;
 }
 
 const portfolio_data: DataType[] = [
@@ -13,49 +17,73 @@ const portfolio_data: DataType[] = [
       id: 1,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb.jpg",
-      title: "Dacht",
+      title: "Dacht - Brand Story",
       tag: "BRANDING",
-      category: "prof prof1"
+      category: "branding commercial",
+      description: "A compelling brand story showcasing Dacht's unique identity",
+      client: "Dacht",
+      videoUrl: "", // You'll add the video URL here
+      videoType: "vimeo"
    },
    {
       id: 2,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-2.jpg",
-      title: "Ye-Almaz Dental",
+      title: "Ye-Almaz Dental - Service Showcase",
       tag: "DIGITAL",
-      category: "prof2 prof4"
+      category: "commercial explainer",
+      description: "Professional dental services presented with clarity and style",
+      client: "Ye-Almaz Dental",
+      videoUrl: "",
+      videoType: "vimeo"
    },
    {
       id: 3,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-3.jpg",
-      title: "SARA Bedroom Solutions",
+      title: "SARA Bedroom Solutions - Product Highlight",
       tag: "MARKETING",
-      category: "prof1 prof3"
+      category: "commercial product",
+      description: "Elegant bedroom solutions brought to life through video",
+      client: "SARA Bedroom Solutions",
+      videoUrl: "",
+      videoType: "vimeo"
    },
    {
       id: 4,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-4.jpg",
-      title: "La Maison",
+      title: "La Maison - Lifestyle Campaign",
       tag: "BRANDING",
-      category: "prof3 prof1"
+      category: "branding lifestyle",
+      description: "Capturing the essence of modern living",
+      client: "La Maison",
+      videoUrl: "",
+      videoType: "vimeo"
    },
    {
       id: 5,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-5.jpg",
-      title: "Brundo",
+      title: "Brundo - Brand Launch",
       tag: "DIGITAL",
-      category: "prof2 prof4"
+      category: "commercial branding",
+      description: "Dynamic brand launch video that makes an impact",
+      client: "Brundo",
+      videoUrl: "",
+      videoType: "vimeo"
    },
    {
       id: 6,
       page: "portfolio_1",
       img: "/assets/img/portfolio/two-columns/thumb-6.jpg",
-      title: "NAK Trading",
+      title: "NAK Trading - Corporate Video",
       tag: "MARKETING",
-      category: "prof prof1"
+      category: "commercial corporate",
+      description: "Professional corporate storytelling",
+      client: "NAK Trading",
+      videoUrl: "",
+      videoType: "vimeo"
    },
 
    // portfolio_2

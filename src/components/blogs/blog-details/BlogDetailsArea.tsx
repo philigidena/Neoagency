@@ -16,8 +16,8 @@ const BlogDetailsArea = () => {
             <div className="row justify-content-center">
                <div className="col-lg-8">
                   <div className="td-blog-details-content ml-50 mr-60 pt-110 mb-65">
-                     <h6 className="td-blog-details-title mb-30">Creative agencies play a pivotal role in helping businesses elevate their market presence, build long-term customer relationships, and adapt to ever-changing market trends.</h6>
-                     <p className="td-blog-details-text">The metaverse can be viewed as an evolution of today’s internet, which in turn evolved from passive media that we simply consumed. In the age of radio and television, the consumer’s only job was to listen and decide if they wanted to buy. While the internet added active participation and community-building, the metaverse adds total immersion and the power to co-create, trade, promote and even profit in ways never before imagined – bringing an entirely new level of complexity to the ways in which brands can interact with their target market.</p>
+                     <h6 className="td-blog-details-title mb-30">At Neo Marketing, we believe that powerful storytelling combined with data-driven insights creates campaigns that don't just reach audiences—they resonate with them.</h6>
+                     <p className="td-blog-details-text">In today's digital landscape, brands face unprecedented challenges in capturing and maintaining audience attention. The evolution from traditional marketing to digital engagement has transformed how businesses connect with their customers. At Neo, we've pioneered an approach that merges the art of compelling narratives with the precision of psychological insights and data analytics. This unique methodology allows us to craft campaigns that not only stand out in crowded markets but also forge authentic, lasting connections with target audiences.</p>
                   </div>
                </div>
                <div className="col-lg-11">
@@ -36,19 +36,18 @@ const BlogDetailsArea = () => {
                </div>
                <div className="col-lg-8">
                   <div className="td-blog-details-content ml-50 mr-60 pt-80">
-                     <h6 className="td-blog-details-title mb-20">Relationship & Communication</h6>
-                     <p className="td-blog-details-text">But, like most politicians, he promised more than he could deliver. Why not indeed! Daylight and everything. And then the battle’s not so bad? Hello, little man. I will destroy you! No, I’m Santa Claus! Kif might! Man, I’m sore all over. I feel like I just went ten rounds with mighty Thor. I found what I need. And it’s not friends, it’s things. Then we’ll go with that data file!</p>
+                     <h6 className="td-blog-details-title mb-20">The Science Behind Emotional Connections</h6>
+                     <p className="td-blog-details-text">Our approach is rooted in understanding human psychology and consumer behavior. We leverage neuroscience research, emotional intelligence frameworks, and behavioral economics to create content that triggers the right responses at the right moments. By analyzing how audiences process information and make decisions, we design campaigns that speak directly to their needs, desires, and motivations—resulting in higher engagement rates and stronger brand loyalty.</p>
                      <blockquote className="td-blog-details-blockquote p-relative mt-70 mb-45">
                         <span className="td-blog-details-blockquote-icon">
                            <svg width="90" height="66" viewBox="0 0 90 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M0 42.6672C0 27.2282 7.2986 14.2644 21.8957 3.77586C25.3156 1.25862 27.8597 0 29.528 0C30.6957 0 31.2796 0.755172 31.2796 2.26552C31.2796 3.69195 31.0294 4.7408 30.5289 5.41207C30.1118 5.99943 29.5697 6.54483 28.9024 7.04828C28.2351 7.55172 27.5678 8.01322 26.9005 8.43276C26.2332 8.8523 25.4408 9.48161 24.5232 10.3207C16.3488 17.369 12.2616 24.2494 12.2616 30.9621C12.2616 34.5701 13.7213 36.3741 16.6408 36.3741C28.9024 36.3741 35.0332 41.4506 35.0332 51.6034C35.0332 55.5471 33.5317 58.9034 30.5289 61.6724C27.5261 64.3575 24.2313 65.7 20.6445 65.7C14.055 65.7 8.96682 63.1408 5.3801 58.0224C1.79337 52.8201 0 47.7017 0 42.6672ZM55.0919 42.6672C55.0919 26.9764 62.182 14.1385 76.3621 4.15345C79.6986 1.38448 82.2009 0 83.8692 0C85.5374 0 86.3716 0.755172 86.3716 2.26552C86.3716 3.69195 86.1213 4.69885 85.6208 5.28621C85.2038 5.87356 84.6616 6.46092 83.9943 7.04827C83.327 7.55172 82.6597 8.01322 81.9924 8.43276C81.3251 8.8523 80.5744 9.48161 79.7403 10.3207C71.3156 17.8724 67.1033 24.7529 67.1033 30.9621C67.1033 34.5701 68.6464 36.3741 71.7327 36.3741C83.9109 36.3741 90 41.4086 90 51.4776C90 55.3374 88.4986 58.6937 85.4957 61.5465C82.5763 64.3155 79.2815 65.7 75.6114 65.7C69.1886 65.7 64.1422 63.1828 60.472 58.1483C56.8853 53.0299 55.0919 47.8695 55.0919 42.6672Z" fill="#1C1D1F" fillOpacity="0.1" />
                            </svg>
                         </span>
-                        <h5 className="title mb-20">Don't watch the clock; do what
-                           it does. keep going.</h5>
-                        <span className="name">Sam Levenson</span>
+                        <h5 className="title mb-20">Great marketing isn't about selling products—it's about telling stories that transform how people see themselves.</h5>
+                        <span className="name">Neo Marketing</span>
                      </blockquote>
-                     <p className="td-blog-details-text">With any accomplished project, great time management is an essential component. We business owners hire product designers, they expect them to not only perform well, but also on time. At Stan Vision, we provide you with an experienced design team, led by an expert PM who knows how to prioritise your platform and product.</p>
+                     <p className="td-blog-details-text">Every successful campaign begins with a deep understanding of the target audience and a clear strategic vision. At Neo, we combine comprehensive market research with creative excellence to deliver campaigns that not only meet business objectives but exceed them. Our multidisciplinary team brings together expertise in content strategy, visual design, digital marketing, and brand development to create cohesive, impactful experiences across all touchpoints.</p>
                   </div>
                </div>
                <div className="col-lg-11">
@@ -58,8 +57,8 @@ const BlogDetailsArea = () => {
                </div>
                <div className="col-lg-8">
                   <div className="td-blog-details-content ml-50 mr-60 pt-80 mb-60">
-                     <h6 className="td-blog-details-title mb-20">Price & Cost Management</h6>
-                     <p className="td-blog-details-text">To conclude, we can't fail to mention one of the most defining elements when hiring digital product designers - pricing. Sure, it is a well-known fact that agencies are the more expensive option. For some companies, working with freelance product designers could be way more appealing due to their budget-friendly costs.</p>
+                     <h6 className="td-blog-details-title mb-20">Building Brands That Last</h6>
+                     <p className="td-blog-details-text">In an era of constant change and information overload, building a brand that stands the test of time requires more than just creative ideas—it demands strategic thinking, authentic storytelling, and measurable results. At Neo Marketing, we're committed to helping brands discover their unique voice, connect with their audiences on a deeper level, and achieve sustainable growth. Whether you're launching a new brand or reimagining an existing one, we bring the expertise, passion, and scientific approach needed to make your vision a reality.</p>
                   </div>
                </div>
                <div className="col-lg-8">
@@ -71,9 +70,9 @@ const BlogDetailsArea = () => {
                                  <path d="M15.3691 9.92961L9.75775 15.5409C9.61238 15.6865 9.43975 15.8019 9.24974 15.8807C9.05972 15.9595 8.85605 16 8.65035 16C8.44466 16 8.24098 15.9595 8.05096 15.8807C7.86095 15.8019 7.68832 15.6865 7.54295 15.5409L0.820312 8.82613V1H8.64644L15.3691 7.72264C15.6606 8.01591 15.8242 8.41262 15.8242 8.82613C15.8242 9.23964 15.6606 9.63634 15.3691 9.92961Z" stroke="#1C1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                  <path d="M4.73438 4.91321H4.74272" stroke="#1C1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                               </svg>
-                              DIGITAL</Link></li>
-                           <li><Link to="#">CREATIVE</Link></li>
-                           <li><Link to="#">MARKETING</Link></li>
+                              BRANDING</Link></li>
+                           <li><Link to="#">STRATEGY</Link></li>
+                           <li><Link to="#">STORYTELLING</Link></li>
                         </ul>
                      </div>
                      <div className="td-blog-details-share mb-10 ml-10">
@@ -121,9 +120,8 @@ const BlogDetailsArea = () => {
                                     </svg>
                                  </Link>
                               </div>
-                              <h5 className="mb-15 mt-20">Donal Braun</h5>
-                              <p>Lorem ipsum dolor sit amet, consetetur sadipscing
-                                 diam nonumy eirmod tempor.!</p>
+                              <h5 className="mb-15 mt-20">Neo Marketing Team</h5>
+                              <p>Where Storytelling Meets Science - Crafting campaigns that resonate and convert.</p>
                            </div>
                         </div>
                      </div>

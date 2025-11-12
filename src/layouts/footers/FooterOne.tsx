@@ -14,49 +14,50 @@ const FooterOne = ({ style }: DataType) => {
                   <div className="col-lg-3 col-md-6 col-sm-6">
                      <div className="td-footer-logo mb-30">
                         <Link to="/">
-                           <img src="/assets/img/logo/logo-white.png" alt="" />
+                           <img src="/neo-logo.png" alt="Neo Marketing Logo" style={{ height: '60px', width: 'auto' }} />
                         </Link>
                      </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-sm-6">
                      <div className="td-footer-widget mb-30">
-                        <h3 className="td-footer-title mb-30">Quick Link</h3>
+                        <h3 className="td-footer-title mb-30">Quick Links</h3>
                         <ul className="td-footer-widget-list">
-                           <li><Link to="#">About</Link></li>
-                           <li><Link to="#">Team</Link></li>
-                           <li><Link to="#">Project</Link></li>
-                           <li><Link to="#">Fact</Link></li>
-                           <li><Link to="#">Contact</Link></li>
+                           <li><Link to="/about">About</Link></li>
+                           <li><Link to="/team">Team</Link></li>
+                           <li><Link to="/portfolio">Portfolio</Link></li>
+                           <li><Link to="/service">Services</Link></li>
+                           <li><Link to="/contact">Contact</Link></li>
                         </ul>
                      </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
                      <div className="td-footer-widget ml-80 mb-30">
-                        <h3 className="td-footer-title mb-30">Others</h3>
+                        <h3 className="td-footer-title mb-30">Services</h3>
                         <ul className="td-footer-widget-list">
-                           <li><Link to="#">License</Link></li>
-                           <li><Link to="#"> Style Guide</Link></li>
-                           <li><Link to="#">Change Log</Link></li>
-                           <li><Link to="#">Error</Link></li>
+                           <li><Link to="/service">Brand Strategy</Link></li>
+                           <li><Link to="/service">Creative Content</Link></li>
+                           <li><Link to="/service">Digital Marketing</Link></li>
+                           <li><Link to="/blog">Blog</Link></li>
                         </ul>
                      </div>
                   </div>
                   <div className="col-lg-4 col-md-6">
                      <div className="td-footer-widget mr-30 mb-30">
-                        <h3 className="td-footer-title mb-30">Address</h3>
-                        <Link className="td-footer-location mb-45 d-inline-block" to="#">XYZ Times Sq, New York, 10000<br />
-                           United States</Link>
-                        <div className="td-footer-form p-relative">
-                           <form onSubmit={(e) => e.preventDefault()}>
-                              <input type="text" placeholder="example@gmail.com" />
-                              <button type="submit">
-                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11L11 1" stroke="#1C1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M1 1H11V11" stroke="#1C1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                 </svg>
-                              </button>
-                           </form>
+                        <h3 className="td-footer-title mb-30">Contact</h3>
+                        <div className="td-footer-location mb-20">
+                           <a href="mailto:neomarketingsolutions@gmail.com" style={{ color: 'inherit', textDecoration: 'none', display: 'block', marginBottom: '10px' }}>
+                              neomarketingsolutions@gmail.com
+                           </a>
+                           <a href="tel:+251955927981" style={{ color: 'inherit', textDecoration: 'none', display: 'block', marginBottom: '5px' }}>
+                              +251-955-927-981
+                           </a>
+                           <a href="tel:+251910219336" style={{ color: 'inherit', textDecoration: 'none', display: 'block' }}>
+                              +251-910-219-336
+                           </a>
                         </div>
+                        <p style={{ fontSize: '14px', marginTop: '20px' }}>
+                           Where Storytelling Meets Science
+                        </p>
                      </div>
                   </div>
                   <div className="col-12">
@@ -64,7 +65,7 @@ const FooterOne = ({ style }: DataType) => {
                         <div className="row align-items-center">
                            <div className="col-lg-6 col-md-8">
                               <div className="td-footer-copyright mb-20">
-                                 <p>© 2025 <Link to="#">Parody.</Link> All Rights Reserved.</p>
+                                 <p>© 2025 <Link to="/">Neo Marketing.</Link> All Rights Reserved.</p>
                               </div>
                            </div>
                            <div className="col-lg-6 col-md-4">

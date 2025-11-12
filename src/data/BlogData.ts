@@ -10,32 +10,7 @@ interface DataType {
 }
 
 const blog_data: DataType[] = [
-   {
-      id: 1,
-      page: "home_1",
-      thumb: "/assets/img/blog/thumb.jpg",
-      title: "Our strategic planning ensures your brand's vision aligns with market opportunities",
-      tag: "Development",
-      date: "August 12, 2024",
-   },
-   {
-      id: 2,
-      page: "home_1",
-      thumb: "/assets/img/blog/thumb-2.jpg",
-      title: "The complex but awesome CSS border-image proper for web design company",
-      tag: "Development",
-      date: "August 12, 2024",
-   },
-   {
-      id: 3,
-      page: "home_1",
-      thumb: "/assets/img/blog/thumb-3.jpg",
-      title: "Our strategic planning ensures your brand's vision aligns with market opportunities",
-      tag: "Development",
-      date: "August 12, 2024",
-   },
-
-   // home_4
+   // home_4 - Homepage Blog Posts
    {
       id: 1,
       page: "home_4",
@@ -53,80 +28,54 @@ const blog_data: DataType[] = [
       date: "January 10, 2025",
    },
 
-   // home_7
-   {
-      id: 1,
-      page: "home_7",
-      thumb: "/assets/img/blog/blog-7/thumb.jpg",
-      title: "Natasha Belly",
-      tag: "DESIGNING",
-      date: "November 3, 2024",
-   },
-   {
-      id: 2,
-      page: "home_7",
-      thumb: "/assets/img/blog/blog-7/thumb-2.jpg",
-      title: "Carlos Voty",
-      tag: "DESIGNING",
-      date: "Aug 3, 2024",
-   },
-   {
-      id: 3,
-      page: "home_7",
-      thumb: "/assets/img/blog/blog-7/thumb-3.jpg",
-      title: "Hallowen Bhuja",
-      tag: "PRODUCTIVE",
-      date: "Aug 3, 2024",
-   },
-
-   // blog_1
+   // blog_1 - Blog Page Posts
    {
       id: 1,
       page: "blog_1",
       thumb: "/assets/img/blog/thumb.jpg",
-      title: "Our strategic planning ensures your brand's vision aligns with market opportunities",
-      tag: "Development",
-      date: "August 12, 2024",
+      title: "Where Storytelling Meets Science: The Neo Approach to Brand Building",
+      tag: "Branding",
+      date: "February 1, 2025",
    },
    {
       id: 2,
       page: "blog_1",
       thumb: "/assets/img/blog/thumb-2.jpg",
-      title: "The complex but awesome CSS border-image proper for web design company",
-      tag: "Development",
-      date: "August 12, 2024",
+      title: "The Art of Visual Storytelling: Creating Content That Converts",
+      tag: "Content Strategy",
+      date: "January 28, 2025",
    },
    {
       id: 3,
       page: "blog_1",
       thumb: "/assets/img/blog/thumb-3.jpg",
-      title: "The complex but awesome CSS border-image proper for web design company",
-      tag: "Development",
-      date: "August 12, 2024",
+      title: "Data-Driven Creativity: How Analytics Shape Modern Marketing Campaigns",
+      tag: "Marketing",
+      date: "January 25, 2025",
    },
    {
       id: 4,
       page: "blog_1",
       thumb: "/assets/img/blog/thumb-4.jpg",
-      title: "Developing advertising campaign across digital, print, TV, or other media platforms.",
-      tag: "Development",
-      date: "August 12, 2024",
+      title: "Building Brand Identity in the Digital Age: A Comprehensive Guide",
+      tag: "Branding",
+      date: "January 20, 2025",
    },
    {
       id: 5,
       page: "blog_1",
       thumb: "/assets/img/blog/thumb-5.jpg",
-      title: "Designing and building websites and applications to ensure businesses",
-      tag: "Development",
-      date: "August 12, 2024",
+      title: "The Power of Authentic Storytelling in Modern Marketing",
+      tag: "Strategy",
+      date: "January 15, 2025",
    },
    {
       id: 6,
       page: "blog_1",
       thumb: "/assets/img/blog/thumb-6.jpg",
-      title: "Focus on promoting products or services through traditional and digital media.",
-      tag: "Development",
-      date: "August 12, 2024",
+      title: "Social Media Strategy: Crafting Campaigns That Resonate and Convert",
+      tag: "Digital Marketing",
+      date: "January 10, 2025",
    },
 ];
 

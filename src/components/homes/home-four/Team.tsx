@@ -14,8 +14,8 @@ const Team = () => {
             <div className="row">
                <div className="col-xxl-6 col-xl-7 offset-xxl-4 offset-xl-3">
                   <div className="td-team-4-title-wrap d-inline-block mb-55">
-                     <h2 className="td-section-4-title mb-0 fw-600">MEET THE</h2>
-                     <h2 className="td-section-4-title second fw-600"><span className="green-text">FOUNDERS</span></h2>
+                     <h2 className="td-section-4-title mb-0 fw-600">MEET THE <span className="green-text">TEAM</span></h2>
+                     {/* <h2 className="td-section-4-title second fw-600"></h2> */}
                   </div>
                </div>
             </div>

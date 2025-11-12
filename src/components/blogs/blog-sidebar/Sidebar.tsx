@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import React from "react"
 
-const tags: string[] = ["Creative", "DESIGN", "Popular", "DIGITAL AGENCY", "Lifestyle",];
+const tags: string[] = ["Branding", "Strategy", "Content", "Marketing", "Design", "Storytelling"];
 
 interface DataType {
    id: number;
@@ -20,27 +20,27 @@ const cat_data: DataType[] = [
    {
       id: 1,
       title: "Branding",
-      count: "(05)",
+      count: "(12)",
    },
    {
       id: 2,
-      title: "UI/UX Design",
-      count: "(04)",
-   },
-   {
-      id: 3,
-      title: "Productive",
-      count: "(09)",
-   },
-   {
-      id: 4,
-      title: "Creative agency",
+      title: "Content Strategy",
       count: "(08)",
    },
    {
+      id: 3,
+      title: "Marketing",
+      count: "(15)",
+   },
+   {
+      id: 4,
+      title: "Digital Marketing",
+      count: "(10)",
+   },
+   {
       id: 5,
-      title: "Digital marketing",
-      count: "(07)",
+      title: "Strategy",
+      count: "(09)",
    },
 ];
 
@@ -48,19 +48,19 @@ const rc_data: RcData[] = [
    {
       id: 1,
       img: "/assets/img/blog/sidebar/right/thumb.jpg",
-      title: "Neque or senectus sole licitudin",
+      title: "The Art of Visual Storytelling in Marketing",
       boder: true,
    },
    {
       id: 2,
       img: "/assets/img/blog/sidebar/right/thumb-2.jpg",
-      title: "Sociosqu eros Duis Euismod cura",
+      title: "Building Authentic Brand Connections",
       boder: true,
    },
    {
       id: 3,
       img: "/assets/img/blog/sidebar/right/thumb-4.jpg",
-      title: "Ultrices dos habite best nulla.",
+      title: "Data-Driven Creative Campaigns",
    },
 ];
 
@@ -82,9 +82,8 @@ const Sidebar = () => {
             <div className="td-blog-postbox-user-thumb mb-20">
                <img src="/assets/img/blog/sidebar/right/avatar.png" alt="" />
             </div>
-            <h6 className="title mb-10">David Brown</h6>
-            <p className="para mb-30">Lorem ipsum dolor consectetur
-               adipiscing elit. </p>
+            <h6 className="title mb-10">Neo Marketing</h6>
+            <p className="para mb-30">Where Storytelling Meets Science</p>
             <div className="td-footer-social">
                <Link to="#">
                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +132,7 @@ const Sidebar = () => {
                   <div className="td-blog-postbox-post-thumb d-flex align-items-center">
                      <img src={item.img} alt="" />
                      <div className="td-blog-postbox-post-content">
-                        <span className="td-blog-postbox-post-date">04 Jan, 2024</span>
+                        <span className="td-blog-postbox-post-date">January 2025</span>
                         <h5 className="td-blog-postbox-post-title"><Link to="/blog-details">{item.title}</Link></h5>
                      </div>
                   </div>
