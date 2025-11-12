@@ -279,8 +279,15 @@ const PortfolioArea = () => {
 
          {/* Custom Styles */}
          <style>{`
+            .td-portfolio-filter-btn {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+               gap: 8px;
+            }
+            
             .td-portfolio-filter-btn button {
-               margin: 0 8px;
+               margin: 0;
                padding: 12px 24px;
                background: transparent;
                border: 2px solid rgba(28, 29, 31, 0.2);
@@ -290,6 +297,7 @@ const PortfolioArea = () => {
                letter-spacing: 0.5px;
                border-radius: 8px;
                transition: all 0.3s ease;
+               white-space: nowrap;
             }
             .td-portfolio-filter-btn button:hover {
                background: rgba(145, 237, 145, 0.1);
@@ -300,6 +308,43 @@ const PortfolioArea = () => {
                background: linear-gradient(135deg, #91ed91 0%, #7FFF00 100%);
                border-color: #91ed91;
                color: #0a1e15;
+            }
+            
+            /* Mobile responsive styles */
+            @media (max-width: 768px) {
+               .td-portfolio-filter-btn {
+                  gap: 6px;
+                  padding: 0 15px;
+               }
+               
+               .td-portfolio-filter-btn button {
+                  padding: 10px 18px;
+                  font-size: 11px;
+                  letter-spacing: 0.3px;
+                  border-radius: 6px;
+               }
+               
+               .col-lg-12.mb-50 {
+                  margin-bottom: 35px !important;
+               }
+            }
+            
+            @media (max-width: 480px) {
+               .td-portfolio-filter-btn {
+                  gap: 5px;
+                  padding: 0 10px;
+               }
+               
+               .td-portfolio-filter-btn button {
+                  padding: 8px 14px;
+                  font-size: 10px;
+                  letter-spacing: 0.2px;
+                  border-width: 1.5px;
+               }
+               
+               .col-lg-12.mb-50 {
+                  margin-bottom: 30px !important;
+               }
             }
             
             /* Polish video cards */
