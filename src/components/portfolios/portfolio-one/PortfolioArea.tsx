@@ -153,13 +153,15 @@ const PortfolioArea = () => {
                                        loading="lazy"
                                        style={{
                                           position: 'absolute',
-                                          top: '50%',
+                                          // Landscape video (id 6) needs different positioning
+                                          top: item.id === 6 ? '50%' : '35%',
                                           left: '50%',
-                                          width: '177.78%',
-                                          height: '177.78%',
-                                          minWidth: '177.78%',
-                                          minHeight: '177.78%',
-                                          transform: 'translate(-50%, -50%)',
+                                          // Landscape video (id 6) needs different dimensions to fill the frame
+                                          width: item.id === 6 ? '100%' : '177.78%',
+                                          height: item.id === 6 ? '250%' : '177.78%',
+                                          minWidth: item.id === 6 ? '100%' : '177.78%',
+                                          minHeight: item.id === 6 ? '250%' : '177.78%',
+                                          transform: item.id === 6 ? 'translate(-50%, -50%)' : 'translate(-50%, -35%)',
                                           pointerEvents: 'auto',
                                           border: 'none'
                                        }}
